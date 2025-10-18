@@ -1,51 +1,61 @@
 import Link from "next/link";
 
-export function SiteFooter() {
+export type FooterLink = {
+  label: string;
+  href: string;
+};
+
+type SiteFooterProps = {
+  contactHeading: string;
+  contactEmail: FooterLink;
+  contactWebsite: FooterLink;
+  rightsNotice: string;
+  legalLinks: FooterLink[];
+};
+
+export function SiteFooter({
+  contactHeading,
+  contactEmail,
+  contactWebsite,
+  rightsNotice,
+  legalLinks,
+}: SiteFooterProps) {
   return (
-  <footer className="border-t border-[var(--border)] bg-[var(--card)] py-10 text-[var(--muted-foreground)]">
+    <footer className="border-t border-[var(--border)] bg-[var(--card)] py-10 text-[var(--muted-foreground)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
         <div className="space-y-1">
-          <p className="text-sm font-semibold text-[var(--foreground)]">Stay in touch</p>
+          <p className="text-sm font-semibold text-[var(--foreground)]">{contactHeading}</p>
           <p className="text-xs">
             <a
               className="text-[var(--primary)] transition hover:opacity-80"
-              href="mailto:support@morsecode.codes"
+              href={contactEmail.href}
             >
-              support@morsecode.codes
+              {contactEmail.label}
             </a>
           </p>
           <p className="text-xs">
             <a
               className="text-[var(--primary)] transition hover:opacity-80"
-              href="https://morsecode.codes"
+              href={contactWebsite.href}
               target="_blank"
               rel="noreferrer"
             >
-              https://morsecode.codes
+              {contactWebsite.label}
             </a>
           </p>
         </div>
         <div className="space-y-1 text-xs">
-          <p>© {new Date().getFullYear()} MorseCode. All rights reserved.</p>
+          <p>{rightsNotice}</p>
           <div className="flex flex-wrap justify-center gap-3 sm:justify-end">
-            <Link
-              className="text-[var(--muted-foreground)] transition hover:text-[var(--primary)]"
-              href="/privacy"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              className="text-[var(--muted-foreground)] transition hover:text-[var(--primary)]"
-              href="/terms"
-            >
-              Terms of Use
-            </Link>
-            <Link
-              className="text-[var(--muted-foreground)] transition hover:text-[var(--primary)]"
-              href="/about"
-            >
-              About Us
-            </Link>
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                className="text-[var(--muted-foreground)] transition hover:text-[var(--primary)]"
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

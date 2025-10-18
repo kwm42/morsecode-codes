@@ -1,0 +1,315 @@
+{
+  "brand": {
+    "name": "MorseCode"
+  },
+  "navigation": {
+    "home": "Home",
+    "translator": "Translator",
+    "chart": "Chart",
+    "learn": "Learn",
+    "fun": "Applications",
+    "community": "Community",
+    "resources": "Resources",
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "header": {
+    "cta": "Launch Translator"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "zh": "中文"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Learn Morse Code Online",
+      "title": "Convert text to Morse, decode messages, and master rhythmic communication.",
+      "description": "Explore a bright, modern toolkit for translators, learners, and hobbyists. Start with instant conversions, stay for interactive lessons, games, and community inspiration.",
+      "primaryCta": "Start Translating",
+      "secondaryCta": "Discover Learning Paths"
+    },
+    "features": {
+      "title": "Core Features of Morse Code",
+      "description": "Everything you need to translate, study, and have fun with Morse code in one place.",
+      "items": {
+        "translator": {
+          "title": "Morse Code Translator",
+          "description": "Translate your messages instantly using a clean interface with dual direction support.",
+          "bullets": [
+            "Text to Morse and Morse back to text with smart formatting.",
+            "Audio playback tools to audition patterns before you transmit."
+          ],
+          "cta": "Start Translating"
+        },
+        "chart": {
+          "title": "Morse Code Alphabet & Number Chart",
+          "description": "Quick reference for Morse code letters, numbers, and common prosigns.",
+          "bullets": [
+            "Filterable tables that make lookups effortless on any device.",
+            "Download PDF guides or play audible dot and dash sequences."
+          ],
+          "cta": "Browse Charts"
+        },
+        "learn": {
+          "title": "Morse Code Learning & Practice Games",
+          "description": "Interactive learning paths that grow with you from beginner to advanced operator.",
+          "bullets": [
+            "Structured lessons, checkpoints, and adaptive drill sessions.",
+            "Time challenge, survival, and custom practice playlists to stay sharp."
+          ],
+          "cta": "Start Learning"
+        },
+        "fun": {
+          "title": "Fun Morse Code Applications",
+          "description": "Bring Morse code to life with playful demos and real-world signal experiments.",
+          "bullets": [
+            "SOS walkthroughs, flashlight signaling, and device-friendly tutorials.",
+            "Brain-teasing puzzles and mini-games perfect for classrooms or meetups."
+          ],
+          "cta": "Explore Experiences"
+        }
+      }
+    },
+    "articles": {
+      "title": "Latest Articles & News",
+      "description": "Fresh perspectives, study tips, and stories from the Morse code community.",
+      "items": {
+        "history": {
+          "title": "History of Morse Code",
+          "description": "Trace the origin, evolution, and modern uses of Morse communication.",
+          "cta": "Read More"
+        },
+        "tips": {
+          "title": "Top 5 Tips to Learn Morse Code Fast",
+          "description": "Train your ear and fingertips with practical daily exercises.",
+          "cta": "Read More"
+        }
+      }
+    }
+  },
+  "translator": {
+    "title": "Morse Code Translator",
+    "description": "Core translator experience including conversion, audio playback, and sharing tools.",
+    "sections": {
+      "textToMorse": {
+        "title": "Text → Morse",
+        "description": "Placeholder for text input, conversion logic, and output formatting."
+      },
+      "morseToText": {
+        "title": "Morse → Text",
+        "description": "Placeholder for Morse code parsing, validation, and text rendering."
+      },
+      "audio": {
+        "title": "Audio Playback",
+        "description": "Placeholder for playback controls and tone generation."
+      },
+      "share": {
+        "title": "Copy & Share",
+        "description": "Placeholder for clipboard helpers, share targets, and QR export."
+      }
+    }
+  },
+  "chart": {
+    "title": "Morse Code Charts",
+    "description": "Alphabet, numbers, and common symbol references with interactive playback and downloads.",
+    "sections": {
+      "alphabet": {
+        "title": "Alphabet A-Z",
+        "description": "Placeholder for letter table with dot and dash sequences and playback support."
+      },
+      "numbers": {
+        "title": "Numbers 0-9",
+        "description": "Placeholder for numeric reference grid with tone previews."
+      },
+      "symbols": {
+        "title": "Common Symbols",
+        "description": "Placeholder for punctuation, prosigns, and customizable entries."
+      },
+      "downloads": {
+        "title": "Downloads & Audio",
+        "description": "Placeholder for PDF exports, CSV downloads, and batch playback helpers."
+      }
+    }
+  },
+  "learnPractice": {
+    "title": "Learn & Practice",
+    "description": "Structured lessons, skill drills, and gamified progress tracking for Morse code learners.",
+    "sections": {
+      "tutorials": {
+        "title": "Tutorial Modules",
+        "description": "Placeholder for staged lesson content covering beginner to advanced material."
+      },
+      "games": {
+        "title": "Practice Games",
+        "description": "Placeholder for challenge modes including time trials and custom drills."
+      },
+      "achievements": {
+        "title": "Achievements & Scores",
+        "description": "Placeholder for progression tracking, badges, and leaderboard integration."
+      }
+    }
+  },
+  "applicationsFun": {
+    "title": "Applications & Fun",
+    "description": "Practical demonstrations and playful experiments that bring Morse code to life.",
+    "sections": {
+      "sos": {
+        "title": "SOS Signal Demo",
+        "description": "Placeholder for visual and audio SOS walkthroughs with configurable tempo."
+      },
+      "light": {
+        "title": "Light Signal Showcase",
+        "description": "Placeholder for flashlight simulations and device control integrations."
+      },
+      "puzzles": {
+        "title": "Morse Puzzles & Mini-games",
+        "description": "Placeholder for puzzle generators, trivia, and collaborative challenges."
+      }
+    }
+  },
+  "community": {
+    "title": "Community & Sharing",
+    "description": "Social hub for discussions, project highlights, and community rankings.",
+    "sections": {
+      "board": {
+        "title": "Message Board",
+        "description": "Placeholder for threaded conversations, moderation tools, and reactions."
+      },
+      "creations": {
+        "title": "User Creations",
+        "description": "Placeholder for gallery uploads, showcases, and content tagging."
+      },
+      "leaderboard": {
+        "title": "Leaderboard & Social",
+        "description": "Placeholder for scoring integrations, share buttons, and community goals."
+      }
+    }
+  },
+  "aboutResources": {
+    "title": "About & Resources",
+    "description": "Background information, downloadable materials, and curated learning links.",
+    "sections": {
+      "about": {
+        "title": "About The Project",
+        "description": "Placeholder for mission statement, team introductions, and roadmap highlights."
+      },
+      "downloads": {
+        "title": "Downloads & Kits",
+        "description": "Placeholder for printable charts, practice sheets, and open data bundles."
+      },
+      "external": {
+        "title": "External Resources",
+        "description": "Placeholder for curated tutorials, historical archives, and community groups."
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Placeholder for common questions, troubleshooting, and contact pathways."
+      }
+    }
+  },
+  "about": {
+    "title": "About MorseCode",
+    "intro": "Learn about the vision behind MorseCode and how we help learners, hobbyists, and professionals connect through rhythmic communication.",
+    "body": {
+      "p1": "MorseCode is your go-to destination for discovering, practicing, and perfecting Morse code. We design intuitive tools that make it easy to translate messages, explore reference material, and build speed through playful practice sessions.",
+      "p2": "We believe that the legacy of Morse communication deserves a modern home. Whether you are decoding your first dots and dashes or polishing contest-ready skills, the platform adapts to your pace with clear guidance and smart feedback loops.",
+      "p3": "Our roadmap includes collaborative community events, real-time exercises, and integrations with hardware devices so you can connect with Morse enthusiasts worldwide."
+    },
+    "offerings": {
+      "title": "What We Offer",
+      "items": [
+        "Instant translator for text-to-Morse and Morse-to-text conversions.",
+        "Comprehensive reference charts covering letters, numbers, and prosigns.",
+        "Interactive lessons, drills, and challenge modes designed for every level.",
+        "Fun signal demos, flashlight exercises, and puzzle-driven minigames."
+      ]
+    },
+    "contact": {
+      "title": "Connect With Us",
+      "description": "Share feedback, suggest new features, or inquire about partnerships any time. We love hearing from fellow Morse code enthusiasts.",
+      "emailLabel": "Email",
+      "websiteLabel": "Website"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Learn how MorseCode handles analytics data, cookies, and user rights across our experiences.",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "body": "MorseCode respects your privacy. This policy explains how we collect, use, and safeguard information when you interact with the platform."
+      },
+      "information": {
+        "title": "2. Information We Collect",
+        "body": "We gather non-personal analytics data such as browser type, approximate location, and usage patterns. Personal information is only collected if you deliberately share it with us, such as when submitting feedback."
+      },
+      "cookies": {
+        "title": "3. Cookies",
+        "body": "Cookies help us remember preferences, enhance accessibility, and understand how features are used. You can disable cookies through your browser, though some functionality may be limited."
+      },
+      "usage": {
+        "title": "4. Data Usage",
+        "body": "Aggregated data guides product improvements, performance monitoring, and reliability efforts. We do not sell or rent your information."
+      },
+      "thirdParty": {
+        "title": "5. Third-Party Services",
+        "body": "We may integrate privacy-friendly analytics providers. These partners process limited, anonymized data solely to deliver insights about feature usage."
+      },
+      "rights": {
+        "title": "6. Your Rights",
+        "body": "You may request access to, correction of, or deletion of any personal information you have shared with us. Contact the team and we will respond promptly."
+      },
+      "updates": {
+        "title": "7. Policy Updates",
+        "body": "We may revise this policy as the platform evolves. The latest version will always be available on this page with an updated effective date."
+      },
+      "contact": {
+        "title": "Questions?",
+        "body": "If you have questions about this policy or wish to exercise your privacy rights, contact us at {email}."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "intro": "Understand your rights and responsibilities when using MorseCode tools and content.",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "body": "By accessing MorseCode or using any of its services, you agree to these Terms of Use. If you do not agree, please discontinue use of the platform immediately."
+      },
+      "usage": {
+        "title": "2. Permitted Usage",
+        "body": "You may access MorseCode for personal, non-commercial purposes. Automated scraping, unauthorized reproduction, or disruption of the service is prohibited."
+      },
+      "ip": {
+        "title": "3. Intellectual Property",
+        "body": "All site content, including text, graphics, and code, is owned or licensed by MorseCode. You may not reproduce or distribute materials without written permission."
+      },
+      "disclaimer": {
+        "title": "4. Disclaimer",
+        "body": "The service is provided \"as is.\" We make no guarantee regarding accuracy, uptime, or suitability for a specific purpose. You use MorseCode at your own risk."
+      },
+      "changes": {
+        "title": "5. Changes to These Terms",
+        "body": "We may update these Terms periodically. Continued use of the platform after updates constitutes acceptance of the revised Terms."
+      },
+      "contact": {
+        "title": "Questions?",
+        "body": "Questions about these Terms? Reach the team at {email}."
+      }
+    }
+  },
+  "footer": {
+    "contactHeading": "Stay in touch",
+    "emailLabel": "support@morsecode.codes",
+    "websiteLabel": "https://morsecode.codes",
+    "rights": "© {year} MorseCode. All rights reserved.",
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "about": "About Us"
+    }
+  }
+}
