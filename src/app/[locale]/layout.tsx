@@ -50,7 +50,7 @@ export default async function LocaleLayout({
     { name: navigationT("chart"), href: getLocalizedPath(locale, "/chart") },
     { name: navigationT("learn"), href: getLocalizedPath(locale, "/learn-practice") },
     { name: navigationT("fun"), href: getLocalizedPath(locale, "/applications-fun") },
-    { name: navigationT("community"), href: getLocalizedPath(locale, "/community") },
+    // { name: navigationT("community"), href: getLocalizedPath(locale, "/community") },
     { name: navigationT("resources"), href: getLocalizedPath(locale, "/about-resources") },
   ];
 

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MorseCode",
+  title: "Morse Code Online – Translate, Practice, and Play",
   description: "Learn, translate, and explore Morse code online.",
 };
 
