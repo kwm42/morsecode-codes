@@ -163,25 +163,53 @@
     }
   },
   "chart": {
-    "title": "Morse Code Charts",
-    "description": "Alphabet, numbers, and common symbol references with interactive playback and downloads.",
+    "title": "Morse Code Alphabet",
+    "description": "Explore every Morse code letter, number, and symbol with instant playback, copy helpers, and download-ready charts.",
+    "search": {
+      "label": "Search chart",
+      "placeholder": "Search letters, numbers, symbols, or Morse code…",
+      "clear": "Clear",
+      "results": {
+        "zero": "No matches",
+        "one": "1 match",
+        "other": "{count} matches"
+      }
+    },
+    "columns": {
+      "section": "Section",
+      "symbol": "Character",
+      "morse": "Morse",
+      "pronunciation": "Pronunciation"
+    },
     "sections": {
-      "alphabet": {
-        "title": "Alphabet A-Z",
-        "description": "Placeholder for letter table with dot and dash sequences and playback support."
+      "letters": {
+        "title": "Letters A-Z",
+        "description": "Learn the full Latin alphabet set with dot and dash callouts."
       },
       "numbers": {
         "title": "Numbers 0-9",
-        "description": "Placeholder for numeric reference grid with tone previews."
+        "description": "Quick access to every numeric pattern, ideal for timed drills."
       },
       "symbols": {
         "title": "Common Symbols",
-        "description": "Placeholder for punctuation, prosigns, and customizable entries."
-      },
-      "downloads": {
-        "title": "Downloads & Audio",
-        "description": "Placeholder for PDF exports, CSV downloads, and batch playback helpers."
+        "description": "Punctuation and prosigns you will encounter in practical messaging."
       }
+    },
+    "actions": {
+      "play": "Play",
+      "stop": "Stop",
+      "copy": "Copy",
+      "download": "Download CSV",
+      "print": "Print chart",
+      "copied": "Copied",
+      "copyError": "Unable to copy",
+      "downloadReady": "Download ready",
+      "downloadError": "Unable to download",
+      "noAudio": "No Morse code available"
+    },
+    "pronunciation": {
+      "dot": "dot",
+      "dash": "dash"
     }
   },
   "learnPractice": {

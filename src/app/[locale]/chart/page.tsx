@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { MorseChart } from "@/components/chart/morse-chart";
 import type { Locale } from "@/i18n/routing";
 
 type ChartPageProps = {
@@ -12,43 +13,62 @@ export default async function ChartPage({ params }: ChartPageProps) {
   setRequestLocale(locale);
   const t = await getTranslations("chart");
 
-  const sections = [
-    {
-      title: t("sections.alphabet.title"),
-      description: t("sections.alphabet.description"),
+  const strings = {
+    search: {
+      label: t("search.label"),
+      placeholder: t("search.placeholder"),
+      clear: t("search.clear"),
+      results: {
+        zero: t("search.results.zero"),
+        one: t("search.results.one"),
+        other: t("search.results.other"),
+      },
     },
-    {
-      title: t("sections.numbers.title"),
-      description: t("sections.numbers.description"),
+    columns: {
+      section: t("columns.section"),
+      symbol: t("columns.symbol"),
+      morse: t("columns.morse"),
+      pronunciation: t("columns.pronunciation"),
     },
-    {
-      title: t("sections.symbols.title"),
-      description: t("sections.symbols.description"),
+    sections: {
+      letters: {
+        title: t("sections.letters.title"),
+        description: t("sections.letters.description"),
+      },
+      numbers: {
+        title: t("sections.numbers.title"),
+        description: t("sections.numbers.description"),
+      },
+      symbols: {
+        title: t("sections.symbols.title"),
+        description: t("sections.symbols.description"),
+      },
     },
-    {
-      title: t("sections.downloads.title"),
-      description: t("sections.downloads.description"),
+    actions: {
+      play: t("actions.play"),
+      stop: t("actions.stop"),
+      copy: t("actions.copy"),
+      download: t("actions.download"),
+      print: t("actions.print"),
+      copied: t("actions.copied"),
+      copyError: t("actions.copyError"),
+      downloadReady: t("actions.downloadReady"),
+      downloadError: t("actions.downloadError"),
+      noAudio: t("actions.noAudio"),
     },
-  ];
+    pronunciation: {
+      dot: t("pronunciation.dot"),
+      dash: t("pronunciation.dash"),
+    },
+  };
 
   return (
-    <section className="mx-auto flex max-w-4xl flex-col gap-8 px-6 py-16 text-[var(--foreground)]">
+    <section className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-16 text-[var(--foreground)]">
       <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">{t("title")}</h1>
-        <p className="text-sm text-[var(--muted-foreground)]">{t("description")}</p>
+        <h1 className="text-3xl font-semibold sm:text-4xl">{t("title")}</h1>
+        <p className="text-sm text-[var(--muted-foreground)] sm:text-base">{t("description")}</p>
       </header>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        {sections.map((section) => (
-          <article
-            key={section.title}
-            className="rounded border border-[var(--border)] bg-[var(--card)] p-4 shadow-sm"
-          >
-            <h2 className="text-lg font-medium">{section.title}</h2>
-            <p className="text-sm text-[var(--muted-foreground)]">{section.description}</p>
-          </article>
-        ))}
-      </div>
+      <MorseChart locale={locale} strings={strings} />
     </section>
   );
 }

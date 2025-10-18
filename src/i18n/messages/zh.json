@@ -163,25 +163,53 @@
     }
   },
   "chart": {
-    "title": "摩斯密码速查表",
-    "description": "包含字母、数字与常用符号的参考，并支持交互式播放与下载。",
+    "title": "摩斯密码字母表",
+    "description": "完整呈现摩斯字母、数字与常用符号，支持即时播放、复制与下载。",
+    "search": {
+      "label": "搜索表格",
+      "placeholder": "搜索字母、数字、符号或摩斯编码…",
+      "clear": "清除",
+      "results": {
+        "zero": "未找到匹配项",
+        "one": "找到 1 条匹配",
+        "other": "找到 {count} 条匹配"
+      }
+    },
+    "columns": {
+      "section": "类别",
+      "symbol": "字符",
+      "morse": "摩斯码",
+      "pronunciation": "读法"
+    },
     "sections": {
-      "alphabet": {
+      "letters": {
         "title": "字母 A-Z",
-        "description": "字母点划序列与播放支持的占位内容。"
+        "description": "掌握完整的拉丁字母点划组合与节奏读法。"
       },
       "numbers": {
         "title": "数字 0-9",
-        "description": "数字参考网格与音调预览的占位内容。"
+        "description": "快速查阅所有数字编码，适合计时练习。"
       },
       "symbols": {
         "title": "常用符号",
-        "description": "标点、专业信号与自定义条目的占位内容。"
-      },
-      "downloads": {
-        "title": "下载与音频",
-        "description": "PDF、CSV 与批量播放辅助的占位内容。"
+        "description": "涵盖实战消息中常见的标点与符号。"
       }
+    },
+    "actions": {
+      "play": "播放",
+      "stop": "停止",
+      "copy": "复制",
+      "download": "下载 CSV",
+      "print": "打印表格",
+      "copied": "已复制",
+      "copyError": "无法复制",
+      "downloadReady": "下载已生成",
+      "downloadError": "无法生成下载",
+      "noAudio": "没有可播放的摩斯码"
+    },
+    "pronunciation": {
+      "dot": "点",
+      "dash": "划"
     }
   },
   "learnPractice": {
