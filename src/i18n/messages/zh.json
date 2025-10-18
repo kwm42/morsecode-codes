@@ -91,7 +91,58 @@
   },
   "translator": {
     "title": "摩斯密码翻译器",
-    "description": "核心翻译体验，涵盖转换、音频播放与分享工具。",
+    "description": "实时转换文本、摩斯密码与音频，满足快速实验的需求。",
+    "mode": {
+      "label": "模式",
+      "auto": "自动识别",
+      "text": "文本 → 摩斯",
+      "morse": "摩斯 → 文本",
+      "autoDetectedText": "检测到文本输入",
+      "autoDetectedMorse": "检测到摩斯输入"
+    },
+    "inputs": {
+      "sourceLabel": "输入内容",
+      "targetLabel": "翻译结果",
+      "textPlaceholder": "输入或粘贴任意文本，支持字母、数字与常用标点。",
+      "morsePlaceholder": "粘贴点(.)与划(-)，字母用空格分隔，单词用斜杠(/)分隔。",
+      "targetPlaceholder": "翻译结果会显示在这里。"
+    },
+    "actions": {
+      "clear": "清空",
+      "copy": "复制结果",
+      "share": "分享",
+      "download": "下载音频",
+      "play": "播放音频",
+      "stop": "停止",
+      "flashLabel": "灯光演示",
+      "flashStart": "开始灯光演示",
+      "flashStop": "停止灯光演示",
+      "historyHint": "最近的转换仅保存在本地设备。"
+    },
+    "controls": {
+      "heading": "播放控制",
+      "speed": "速度",
+      "speedUnit": "wpm",
+      "speedHelp": "调整每分钟单词数。",
+      "tone": "音调",
+      "toneUnit": "Hz",
+      "toneHelp": "设置振荡器频率。"
+    },
+    "history": {
+      "title": "最近翻译",
+      "empty": "进行一次翻译即可建立历史记录。",
+      "clear": "清除历史",
+      "restore": "恢复"
+    },
+    "notifications": {
+      "copied": "已复制到剪贴板",
+      "shareSuccess": "分享完成",
+      "shareError": "当前设备不支持分享",
+      "noMorse": "没有可播放的摩斯密码。",
+      "downloadReady": "音频已准备好下载",
+      "copyError": "无法复制到剪贴板",
+      "historyCleared": "历史已清除"
+    },
     "sections": {
       "textToMorse": {
         "title": "文本 → 摩斯",

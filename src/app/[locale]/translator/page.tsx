@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { TranslatorWorkspace } from "@/components/translator/translator-workspace";
 import type { Locale } from "@/i18n/routing";
 
 type TranslatorPageProps = {
@@ -12,43 +13,67 @@ export default async function TranslatorPage({ params }: TranslatorPageProps) {
   setRequestLocale(locale);
   const t = await getTranslations("translator");
 
-  const sections = [
-    {
-      title: t("sections.textToMorse.title"),
-      description: t("sections.textToMorse.description"),
+  const strings = {
+    mode: {
+      label: t("mode.label"),
+      auto: t("mode.auto"),
+      text: t("mode.text"),
+      morse: t("mode.morse"),
+      autoDetectedText: t("mode.autoDetectedText"),
+      autoDetectedMorse: t("mode.autoDetectedMorse"),
     },
-    {
-      title: t("sections.morseToText.title"),
-      description: t("sections.morseToText.description"),
+    inputs: {
+      sourceLabel: t("inputs.sourceLabel"),
+      targetLabel: t("inputs.targetLabel"),
+      textPlaceholder: t("inputs.textPlaceholder"),
+      morsePlaceholder: t("inputs.morsePlaceholder"),
+      targetPlaceholder: t("inputs.targetPlaceholder"),
     },
-    {
-      title: t("sections.audio.title"),
-      description: t("sections.audio.description"),
+    actions: {
+      clear: t("actions.clear"),
+      copy: t("actions.copy"),
+      share: t("actions.share"),
+      download: t("actions.download"),
+      play: t("actions.play"),
+      stop: t("actions.stop"),
+      flashLabel: t("actions.flashLabel"),
+      flashStart: t("actions.flashStart"),
+      flashStop: t("actions.flashStop"),
+      historyHint: t("actions.historyHint"),
     },
-    {
-      title: t("sections.share.title"),
-      description: t("sections.share.description"),
+    controls: {
+      heading: t("controls.heading"),
+      speed: t("controls.speed"),
+      speedUnit: t("controls.speedUnit"),
+      speedHelp: t("controls.speedHelp"),
+      tone: t("controls.tone"),
+      toneUnit: t("controls.toneUnit"),
+      toneHelp: t("controls.toneHelp"),
     },
-  ];
+    history: {
+      title: t("history.title"),
+      empty: t("history.empty"),
+      clear: t("history.clear"),
+      restore: t("history.restore"),
+    },
+    notifications: {
+      copied: t("notifications.copied"),
+      copyError: t("notifications.copyError"),
+      shareSuccess: t("notifications.shareSuccess"),
+      shareError: t("notifications.shareError"),
+      noMorse: t("notifications.noMorse"),
+      downloadReady: t("notifications.downloadReady"),
+      historyCleared: t("notifications.historyCleared"),
+    },
+  };
 
   return (
-    <section className="mx-auto flex max-w-4xl flex-col gap-8 px-6 py-16 text-[var(--foreground)]">
+    <section className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-16 text-[var(--foreground)]">
       <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">{t("title")}</h1>
-        <p className="text-sm text-[var(--muted-foreground)]">{t("description")}</p>
+        <h1 className="text-3xl font-semibold sm:text-4xl">{t("title")}</h1>
+        <p className="text-sm text-[var(--muted-foreground)] sm:text-base">{t("description")}</p>
       </header>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        {sections.map((section) => (
-          <article
-            key={section.title}
-            className="rounded border border-[var(--border)] bg-[var(--card)] p-4 shadow-sm"
-          >
-            <h2 className="text-lg font-medium">{section.title}</h2>
-            <p className="text-sm text-[var(--muted-foreground)]">{section.description}</p>
-          </article>
-        ))}
-      </div>
+      <TranslatorWorkspace locale={locale} strings={strings} />
     </section>
   );
 }

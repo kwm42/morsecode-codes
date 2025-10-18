@@ -91,7 +91,58 @@
   },
   "translator": {
     "title": "Morse Code Translator",
-    "description": "Core translator experience including conversion, audio playback, and sharing tools.",
+    "description": "Convert text, Morse, and audio with a live toolset built for rapid experimentation.",
+    "mode": {
+      "label": "Mode",
+      "auto": "Auto detect",
+      "text": "Text → Morse",
+      "morse": "Morse → Text",
+      "autoDetectedText": "Detected text input",
+      "autoDetectedMorse": "Detected Morse input"
+    },
+    "inputs": {
+      "sourceLabel": "Source input",
+      "targetLabel": "Translated output",
+      "textPlaceholder": "Type or paste any message. Letters, numbers, and punctuation are supported.",
+      "morsePlaceholder": "Paste dots (.) and dashes (-). Separate letters with spaces and words with slashes (/).",
+      "targetPlaceholder": "Your translation appears here."
+    },
+    "actions": {
+      "clear": "Clear",
+      "copy": "Copy result",
+      "share": "Share",
+      "download": "Download audio",
+      "play": "Play audio",
+      "stop": "Stop",
+      "flashLabel": "Light demo",
+      "flashStart": "Start light demo",
+      "flashStop": "Stop light demo",
+      "historyHint": "Recent translations stay on this device."
+    },
+    "controls": {
+      "heading": "Playback controls",
+      "speed": "Speed",
+      "speedUnit": "wpm",
+      "speedHelp": "Adjust words per minute.",
+      "tone": "Tone",
+      "toneUnit": "Hz",
+      "toneHelp": "Set oscillator frequency."
+    },
+    "history": {
+      "title": "Recent translations",
+      "empty": "Translate something to build your history.",
+      "clear": "Clear history",
+      "restore": "Restore"
+    },
+    "notifications": {
+      "copied": "Copied to clipboard",
+      "shareSuccess": "Shared successfully",
+      "shareError": "Sharing is not available on this device",
+      "noMorse": "No Morse code available to play.",
+      "downloadReady": "Audio download ready",
+      "copyError": "Unable to copy to clipboard",
+      "historyCleared": "History cleared"
+    },
     "sections": {
       "textToMorse": {
         "title": "Text → Morse",
