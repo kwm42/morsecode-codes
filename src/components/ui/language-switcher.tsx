@@ -1,8 +1,9 @@
 'use client';
 
 import * as Select from "@radix-ui/react-select";
-import { useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { useMemo } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { defaultLocale } from "@/i18n/routing";
 
 export type LanguageLink = {
   locale: string;
@@ -18,26 +19,41 @@ type LanguageSwitcherProps = {
 
 export function LanguageSwitcher({ languages, label }: LanguageSwitcherProps) {
   const router = useRouter();
-  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const supportedLocales = useMemo(() => new Set(languages.map((language) => language.locale)), [languages]);
 
   const activeLocale = languages.find((language) => language.isActive)?.locale ?? languages[0]?.locale ?? "";
 
   const handleChange = (nextLocale: string) => {
-    const targetLanguage = languages.find((language) => language.locale === nextLocale);
-
-    if (!targetLanguage) {
+    if (!supportedLocales.has(nextLocale)) {
       return;
     }
 
-    startTransition(() => {
-      router.push(targetLanguage.href);
-    });
+    const currentPathname = pathname ?? "/";
+    const segments = currentPathname.split("/").filter(Boolean);
+    const currentHasLocale = segments.length > 0 && supportedLocales.has(segments[0]);
+    const restSegments = currentHasLocale ? segments.slice(1) : segments;
+
+    // const nextSegments = nextLocale === defaultLocale ? restSegments : [nextLocale, ...restSegments];
+    const nextSegments = [nextLocale, ...restSegments];
+    const nextPath = nextSegments.length ? `/${nextSegments.join("/")}` : "/";
+    const search = searchParams.toString();
+    const resolvedPath = search ? `${nextPath}?${search}` : nextPath;
+    const currentFullPath = search ? `${currentPathname}?${search}` : currentPathname;
+
+    if (resolvedPath === currentFullPath) {
+      return;
+    }
+
+    router.push(resolvedPath);
   };
 
   return (
     <div className="inline-flex items-center">
       <span className="sr-only">{label}</span>
-      <Select.Root value={activeLocale} onValueChange={handleChange} disabled={isPending}>
+      <Select.Root value={activeLocale} onValueChange={handleChange}>
         <Select.Trigger
           aria-label={label}
           className="flex min-w-[150px] items-center justify-between gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[var(--foreground)] shadow-sm transition focus:border-[var(--primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30 data-[state=open]:border-[var(--primary)] disabled:cursor-not-allowed disabled:opacity-70"
