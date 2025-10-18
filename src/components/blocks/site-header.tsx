@@ -1,16 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import type { LanguageLink } from "@/components/ui/language-switcher";
+
+export type { LanguageLink } from "@/components/ui/language-switcher";
 
 export type NavigationLink = {
   name: string;
   href: string;
-};
-
-export type LanguageLink = {
-  locale: string;
-  label: string;
-  href: string;
-  isActive: boolean;
 };
 
 type SiteHeaderProps = {
@@ -61,21 +58,7 @@ export function SiteHeader({
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <div
-            className="flex items-center gap-2"
-            aria-label={languageLabel}
-          >
-            <span className="sr-only">{languageLabel}</span>
-            {languages.map((language) => (
-              <Link
-                key={language.locale}
-                href={language.href}
-                className={`text-xs font-semibold uppercase tracking-wide transition-colors duration-150 ${language.isActive ? "text-[var(--primary)]" : "text-[var(--muted-foreground)] hover:text-[var(--primary)]"}`}
-              >
-                {language.label}
-              </Link>
-            ))}
-          </div>
+          <LanguageSwitcher languages={languages} label={languageLabel} />
           <Link
             href={cta.href}
             className="inline-flex items-center rounded-full bg-[var(--primary)] px-4 py-2 text-sm font-semibold text-[var(--primary-foreground)] shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:brightness-95"
