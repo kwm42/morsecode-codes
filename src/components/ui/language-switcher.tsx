@@ -3,7 +3,6 @@
 import * as Select from "@radix-ui/react-select";
 import { useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { defaultLocale } from "@/i18n/routing";
 
 export type LanguageLink = {
   locale: string;

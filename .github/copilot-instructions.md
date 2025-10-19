@@ -6,7 +6,7 @@
 - 运行目标：构建静态资源并通过 Cloudflare Workers 提供服务
 
 ## 通用
-
+- 始终使用中文回答用户，代码注释也要使用中文
 - 这是一个使用 App Router 的 Next.js TypeScript 应用。
 - 使用 React 开发组件，优先使用函数式组件。
 - 使用 Tailwind CSS 进行样式设计。

@@ -1,4 +1,12 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  ApplicationsCta,
+  ApplicationsHero,
+  LightDemo,
+  PuzzlesShowcase,
+  SosDemo,
+  type ApplicationsPageCopy,
+} from "@/components/applications-fun";
 import type { Locale } from "@/i18n/routing";
 
 type ApplicationsFunPageProps = {
@@ -12,39 +20,56 @@ export default async function ApplicationsFunPage({ params }: ApplicationsFunPag
   setRequestLocale(locale);
   const t = await getTranslations("applicationsFun");
 
-  const sections = [
-    {
-      title: t("sections.sos.title"),
-      description: t("sections.sos.description"),
+  const pageCopy: ApplicationsPageCopy = {
+    hero: {
+      badge: t("hero.badge"),
+      headline: t("hero.headline"),
+      summary: t("hero.summary"),
+      primaryCta: t("hero.primaryCta"),
+      secondaryCta: t("hero.secondaryCta"),
     },
-    {
-      title: t("sections.light.title"),
-      description: t("sections.light.description"),
+    sos: {
+      title: t("sos.title"),
+      summary: t("sos.summary"),
+      features: t.raw("sos.features") as ApplicationsPageCopy["sos"]["features"],
+      controls: t.raw("sos.controls") as ApplicationsPageCopy["sos"]["controls"],
+      notes: t("sos.notes"),
     },
-    {
-      title: t("sections.puzzles.title"),
-      description: t("sections.puzzles.description"),
+    light: {
+      title: t("light.title"),
+      summary: t("light.summary"),
+      modes: t.raw("light.modes") as ApplicationsPageCopy["light"]["modes"],
+      tips: t.raw("light.tips") as ApplicationsPageCopy["light"]["tips"],
+      accessibility: t("light.accessibility"),
     },
-  ];
+    puzzles: {
+      title: t("puzzles.title"),
+      summary: t("puzzles.summary"),
+      games: t.raw("puzzles.games") as ApplicationsPageCopy["puzzles"]["games"],
+      note: t("puzzles.note"),
+    },
+    cta: {
+      headline: t("cta.headline"),
+      body: t("cta.body"),
+      primary: t("cta.primary"),
+      secondary: t("cta.secondary"),
+    },
+    comingSoonLabel: t("comingSoon"),
+  };
 
   return (
-    <section className="mx-auto flex max-w-4xl flex-col gap-8 px-6 py-16 text-[var(--foreground)]">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">{t("title")}</h1>
-        <p className="text-sm text-[var(--muted-foreground)]">{t("description")}</p>
+    <main className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 text-[var(--foreground)]">
+      <header className="space-y-3">
+        <h1 className="text-4xl font-semibold md:text-5xl">{t("title")}</h1>
+        <p className="max-w-3xl text-sm text-[var(--muted-foreground)] md:text-base">
+          {t("description")}
+        </p>
       </header>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        {sections.map((section) => (
-          <article
-            key={section.title}
-            className="rounded border border-[var(--border)] bg-[var(--card)] p-4 shadow-sm"
-          >
-            <h2 className="text-lg font-medium">{section.title}</h2>
-            <p className="text-sm text-[var(--muted-foreground)]">{section.description}</p>
-          </article>
-        ))}
-      </div>
-    </section>
+      <ApplicationsHero copy={pageCopy.hero} locale={locale} />
+      <SosDemo copy={pageCopy.sos} comingSoonLabel={pageCopy.comingSoonLabel} />
+      <LightDemo copy={pageCopy.light} comingSoonLabel={pageCopy.comingSoonLabel} />
+      <PuzzlesShowcase copy={pageCopy.puzzles} comingSoonLabel={pageCopy.comingSoonLabel} />
+      <ApplicationsCta copy={pageCopy.cta} locale={locale} />
+    </main>
   );
 }

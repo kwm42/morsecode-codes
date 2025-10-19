@@ -213,39 +213,226 @@
     }
   },
   "learnPractice": {
-    "title": "Learn & Practice",
-    "description": "Structured lessons, skill drills, and gamified progress tracking for Morse code learners.",
-    "sections": {
-      "tutorials": {
-        "title": "Tutorial Modules",
-        "description": "Placeholder for staged lesson content covering beginner to advanced material."
-      },
-      "games": {
-        "title": "Practice Games",
-        "description": "Placeholder for challenge modes including time trials and custom drills."
-      },
-      "achievements": {
-        "title": "Achievements & Scores",
-        "description": "Placeholder for progression tracking, badges, and leaderboard integration."
+    "title": "Morse Code Learn & Practice",
+    "description": "Master Morse code through guided lessons, hands-on drills, and game-inspired challenges that track your skills over time.",
+    "comingSoon": "Coming soon",
+    "intro": {
+      "badge": "Step-by-step curriculum",
+      "headline": "Learn, train, and game your way to Morse fluency",
+      "summary": "From first dots and dashes to lightning-fast decoding, build confidence with immersive sessions tailored to every level."
+    },
+    "learn": {
+      "title": "Learn mode",
+      "subtitle": "Study the essentials in focused chapters",
+      "sections": [
+        {
+          "title": "Foundations",
+          "description": "Discover Morse history, timing, and rhythm with animated dot-and-dash demos."
+        },
+        {
+          "title": "Letters A-Z",
+          "description": "Hear, see, and memorize each alphabet pattern with guided playback sequences."
+        },
+        {
+          "title": "Numbers & Symbols",
+          "description": "Lock in numerals and punctuation using spaced repetition playlists."
+        },
+        {
+          "title": "Timing Rules",
+          "description": "Visualize intra-character, letter, and word spacing to send smooth, readable code."
+        }
+      ],
+      "actions": {
+        "step": "Step through",
+        "auto": "Play all",
+        "bookmark": "Bookmark"
       }
+    },
+    "practice": {
+      "title": "Practice mode",
+      "subtitle": "Switch up drills to reinforce recall",
+      "drills": [
+        {
+          "title": "Audio to text",
+          "difficulty": "Beginner",
+          "description": "Listen to tone bursts and type the matching letters."
+        },
+        {
+          "title": "Visual flashcards",
+          "difficulty": "Intermediate",
+          "description": "Identify characters from dot-and-dash animations."
+        },
+        {
+          "title": "Morse typing",
+          "difficulty": "Intermediate",
+          "description": "Translate your keyboard input into precise Morse sequences."
+        },
+        {
+          "title": "Dictation",
+          "difficulty": "Advanced",
+          "description": "Decode full sentences at selectable word-per-minute speeds."
+        },
+        {
+          "title": "Speed challenge",
+          "difficulty": "Expert",
+          "description": "Score as many correct answers as possible in 60 seconds."
+        },
+        {
+          "title": "Shuffle mix",
+          "difficulty": "Intermediate",
+          "description": "React to unpredictable symbol playlists to sharpen reflexes."
+        }
+      ],
+      "actions": {
+        "start": "Start drill",
+        "customize": "Customize",
+        "stats": "View stats"
+      }
+    },
+    "games": {
+      "title": "Game modes",
+      "subtitle": "Turn practice into playful competition",
+      "items": [
+        {
+          "title": "Speed typing arena",
+          "description": "Decode rapid-fire Morse streams and climb the real-time leaderboard."
+        },
+        {
+          "title": "Accuracy streak",
+          "description": "Maintain 80%+ accuracy over ten rounds to advance to new difficulty tiers."
+        },
+        {
+          "title": "Pattern puzzle",
+          "description": "Drag-and-drop snippets to rebuild hidden words from Morse fragments."
+        }
+      ],
+      "actions": {
+        "queue": "Join queue",
+        "solo": "Play solo",
+        "invite": "Challenge friends"
+      }
+    },
+    "progress": {
+      "title": "Progress & rewards",
+      "subtitle": "Track momentum and celebrate milestones",
+      "stats": {
+        "streak": "Day streak",
+        "accuracy": "Accuracy",
+        "wpm": "Peak WPM"
+      },
+      "achievements": [
+        {
+          "title": "Learner",
+          "description": "Complete the A–Z curriculum."
+        },
+        {
+          "title": "Expert",
+          "description": "Reach 90% accuracy in dictation mode."
+        },
+        {
+          "title": "Speedster",
+          "description": "Set a new record in the speed challenge."
+        }
+      ],
+      "actions": {
+        "viewAll": "View all achievements",
+        "reset": "Reset stats",
+        "share": "Share progress"
+      }
+    },
+    "cta": {
+      "headline": "Ready to train like an operator?",
+      "body": "Pick a mode, choose your pace, and let adaptive guidance keep the momentum going.",
+      "primary": "Launch trainer",
+      "secondary": "Browse curriculum"
     }
   },
   "applicationsFun": {
     "title": "Applications & Fun",
     "description": "Practical demonstrations and playful experiments that bring Morse code to life.",
-    "sections": {
-      "sos": {
-        "title": "SOS Signal Demo",
-        "description": "Placeholder for visual and audio SOS walkthroughs with configurable tempo."
-      },
-      "light": {
-        "title": "Light Signal Showcase",
-        "description": "Placeholder for flashlight simulations and device control integrations."
-      },
-      "puzzles": {
-        "title": "Morse Puzzles & Mini-games",
-        "description": "Placeholder for puzzle generators, trivia, and collaborative challenges."
-      }
+    "comingSoon": "Coming soon",
+    "hero": {
+      "badge": "Real-world practice",
+      "headline": "Bring Morse code to life with hands-on demos",
+      "summary": "Experiment with authentic SOS signals, light-based messaging, and classroom-friendly games that make practice playful.",
+      "primaryCta": "Open translator",
+      "secondaryCta": "Return to learning"
+    },
+    "sos": {
+      "title": "SOS signal demo",
+      "summary": "Explore the classic SOS pattern with synchronized audio, visuals, and pacing controls.",
+      "features": [
+        {
+          "title": "Rhythm timeline",
+          "description": "Watch dot and dash beats animate in real time as the signal plays."
+        },
+        {
+          "title": "Audio oscillator",
+          "description": "Preview tone generator output with adjustable words-per-minute pacing."
+        },
+        {
+          "title": "Signal etiquette",
+          "description": "Learn the history and best practices behind international distress messages."
+        }
+      ],
+      "controls": [
+        "Start demo",
+        "Adjust speed",
+        "Tune tone"
+      ],
+      "notes": "Practice responsibly and avoid transmitting SOS patterns outside of safe, simulated environments."
+    },
+    "light": {
+      "title": "Flashlight & light signal demo",
+      "summary": "Simulate torch-based communication with guided presets and customization options.",
+      "modes": [
+        {
+          "title": "SOS preset",
+          "description": "Loop an accurate SOS flash pattern for quick instruction."
+        },
+        {
+          "title": "Custom message",
+          "description": "Convert any short phrase into a flashing sequence with pacing hints."
+        },
+        {
+          "title": "Classroom mode",
+          "description": "Share step-by-step timing tips suited for group demonstrations."
+        }
+      ],
+      "tips": [
+        "Dim the room or cover the lens to emphasize light changes.",
+        "Narrate dot and dash cadence while the light animates.",
+        "Encourage participants to mirror the pattern with their own devices."
+      ],
+      "accessibility": "Provide flashing-light warnings and offer text-only guidance when needed."
+    },
+    "puzzles": {
+      "title": "Morse puzzles & mini-games",
+      "summary": "Turn practice into collaborative challenges ideal for classrooms and meetups.",
+      "games": [
+        {
+          "title": "Pattern puzzle",
+          "description": "Drag and drop dot-dash fragments to rebuild hidden words.",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Speed typing arena",
+          "description": "Decode rapid-fire sequences and chase a new personal record.",
+          "difficulty": "Advanced"
+        },
+        {
+          "title": "Accuracy challenge",
+          "description": "Stay above 80% accuracy across ten rounds to unlock new levels.",
+          "difficulty": "Expert"
+        }
+      ],
+      "note": "Score tracking and leaderboards will arrive in a future update."
+    },
+    "cta": {
+      "headline": "Ready to demo Morse code with your crew?",
+      "body": "Combine these guided experiences with our translator and lesson plans to keep curiosity high.",
+      "primary": "Launch translator",
+      "secondary": "Explore lessons"
     }
   },
   "community": {

@@ -21,7 +21,7 @@ export default async function ChartPage({ params }: ChartPageProps) {
       results: {
         zero: t("search.results.zero"),
         one: t("search.results.one"),
-        other: t("search.results.other"),
+        other: t.raw("search.results.other"),
       },
     },
     columns: {

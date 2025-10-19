@@ -213,39 +213,226 @@
     }
   },
   "learnPractice": {
-    "title": "学习与练习",
-    "description": "结构化课程、技能训练与游戏化进度，帮助你持续进步。",
-    "sections": {
-      "tutorials": {
-        "title": "课程模块",
-        "description": "涵盖从入门到进阶内容的分阶段课程占位说明。"
+      "title": "摩斯学习与练习",
+      "description": "通过循序渐进的课程、实战训练与趣味挑战，全面提升摩斯密码技能。",
+      "comingSoon": "即将上线",
+      "intro": {
+        "badge": "循序渐进的课程",
+        "headline": "边学边练，打造摩斯密码肌肉记忆",
+        "summary": "从第一串点划到疾速解码，沉浸式体验帮助你稳步建立自信。"
+      },
+      "learn": {
+        "title": "学习模式",
+        "subtitle": "拆分章节，专注掌握核心知识",
+        "sections": [
+          {
+            "title": "基础概念",
+            "description": "了解摩斯密码的历史、节奏与节拍动画演示。"
+          },
+          {
+            "title": "字母 A-Z",
+            "description": "听、看、记三位一体，配合循环播放巩固记忆。"
+          },
+          {
+            "title": "数字与符号",
+            "description": "利用间隔重复表单熟悉数字与常见标点。"
+          },
+          {
+            "title": "节奏规则",
+            "description": "可视化字符间、单词间的停顿，确保节奏流畅。"
+          }
+        ],
+        "actions": {
+          "step": "逐步学习",
+          "auto": "播放全部",
+          "bookmark": "加入收藏"
+        }
+      },
+      "practice": {
+        "title": "练习模式",
+        "subtitle": "多样化训练巩固记忆",
+        "drills": [
+          {
+            "title": "听码识字",
+            "difficulty": "初级",
+            "description": "聆听音频节奏，输入对应字母。"
+          },
+          {
+            "title": "闪光识字",
+            "difficulty": "中级",
+            "description": "根据点划动画识别字符。"
+          },
+          {
+            "title": "打码练习",
+            "difficulty": "中级",
+            "description": "把键盘输入即时转换为摩斯编码。"
+          },
+          {
+            "title": "听写模式",
+            "difficulty": "高级",
+            "description": "解码完整句子，可选择不同速度。"
+          },
+          {
+            "title": "限时挑战",
+            "difficulty": "专家",
+            "description": "60 秒内尽可能答对更多字符。"
+          },
+          {
+            "title": "随机练习",
+            "difficulty": "中级",
+            "description": "随机字符播放，强化应变速度。"
+          }
+        ],
+        "actions": {
+          "start": "开始练习",
+          "customize": "自定义设置",
+          "stats": "查看统计"
+        }
       },
       "games": {
-        "title": "练习游戏",
-        "description": "包含计时、闯关与自定义训练模式的占位说明。"
+        "title": "游戏模式",
+        "subtitle": "在趣味竞赛中升级技能",
+        "items": [
+          {
+            "title": "极速打码场",
+            "description": "解码高速信号，实时刷新排行榜。"
+          },
+          {
+            "title": "精准挑战",
+            "description": "保持 80% 以上准确率连续通关，解锁更高难度。"
+          },
+          {
+            "title": "拼图模式",
+            "description": "拖拽摩斯片段，拼出隐藏单词。"
+          }
+        ],
+        "actions": {
+          "queue": "加入匹配",
+          "solo": "单人练习",
+          "invite": "邀请好友"
+        }
       },
-      "achievements": {
-        "title": "成就与积分",
-        "description": "追踪进度、徽章与排行榜整合的占位说明。"
+      "progress": {
+        "title": "进度与奖励",
+        "subtitle": "记录成长轨迹，解锁荣誉勋章",
+        "stats": {
+          "streak": "连续练习天数",
+          "accuracy": "准确率",
+          "wpm": "最高速度"
+        },
+        "achievements": [
+          {
+            "title": "Learner",
+            "description": "完成 A–Z 课程。"
+          },
+          {
+            "title": "Expert",
+            "description": "听写模式准确率达到 90%。"
+          },
+          {
+            "title": "Speedster",
+            "description": "刷新限时挑战最佳成绩。"
+          }
+        ],
+        "actions": {
+          "viewAll": "查看全部勋章",
+          "reset": "重置统计",
+          "share": "分享进度"
+        }
+      },
+      "cta": {
+        "headline": "准备好像操作员一样训练了吗？",
+        "body": "选择模式、设定节奏，智能引导陪你稳步提升。",
+        "primary": "启动训练",
+        "secondary": "查看课程"
       }
-    }
-  },
+    },
   "applicationsFun": {
     "title": "应用与趣味",
     "description": "演示与趣味实验，让摩斯密码走进真实场景。",
-    "sections": {
-      "sos": {
-        "title": "SOS 信号演示",
-        "description": "包含可调节节奏的 SOS 可视与音频演示占位说明。"
-      },
-      "light": {
-        "title": "灯光信号演示",
-        "description": "手电筒模拟与设备控制集成的占位说明。"
-      },
-      "puzzles": {
-        "title": "摩斯谜题与小游戏",
-        "description": "适合课堂或聚会的谜题生成、答题与协作挑战占位说明。"
-      }
+    "comingSoon": "即将上线",
+    "hero": {
+      "badge": "真实场景练习",
+      "headline": "用互动演示把摩斯密码带进日常",
+      "summary": "体验标准 SOS 信号、灯光通信模拟与课堂小游戏，让练习过程更具沉浸感。",
+      "primaryCta": "打开翻译器",
+      "secondaryCta": "返回学习页"
+    },
+    "sos": {
+      "title": "SOS 信号演示",
+      "summary": "通过同步音频、动画与节奏控制，认识经典的国际救援信号。",
+      "features": [
+        {
+          "title": "节奏时间轴",
+          "description": "播放时实时呈现点划节奏，帮助理解停顿与拍点。"
+        },
+        {
+          "title": "音频振荡器",
+          "description": "可调词速的音调预览，模拟真实发报的听感。"
+        },
+        {
+          "title": "信号礼仪",
+          "description": "回顾国际通用的历史背景与发送规范，避免误用。"
+        }
+      ],
+      "controls": [
+        "开始演示",
+        "调节速度",
+        "调整音调"
+      ],
+      "notes": "请在安全的模拟环境中练习，避免在真实频道误发求救信号。"
+    },
+    "light": {
+      "title": "灯光信号模拟",
+      "summary": "通过预设与自定义模式体验手电筒通信，适合课堂或外出活动。",
+      "modes": [
+        {
+          "title": "SOS 预设",
+          "description": "循环播放标准 SOS 闪烁，快速辅助讲解。"
+        },
+        {
+          "title": "自定义短语",
+          "description": "将任意短语转换为闪烁序列，并提示节奏。"
+        },
+        {
+          "title": "课堂模式",
+          "description": "提供分步时序提示，方便多人同步练习。"
+        }
+      ],
+      "tips": [
+        "调暗环境或遮挡光源，让闪烁更明显。",
+        "边播放边口述点划节奏，帮助记忆。",
+        "鼓励参与者使用自己的设备同步练习。"
+      ],
+      "accessibility": "提前提醒闪烁光效可能带来的不适，并提供文本或音频替代。"
+    },
+    "puzzles": {
+      "title": "摩斯谜题与小游戏",
+      "summary": "将练习转化为协作挑战，适合课堂、社群或聚会互动。",
+      "games": [
+        {
+          "title": "节奏拼图",
+          "description": "拖动点划碎片还原隐藏单词。",
+          "difficulty": "中级"
+        },
+        {
+          "title": "极速打码场",
+          "description": "快速解码连续信号，刷新个人纪录。",
+          "difficulty": "高级"
+        },
+        {
+          "title": "精准挑战",
+          "description": "连续十轮保持 80% 以上准确率以解锁新难度。",
+          "difficulty": "专家"
+        }
+      ],
+      "note": "成绩记录与排行榜功能将于后续更新提供。"
+    },
+    "cta": {
+      "headline": "准备好和伙伴一起展示摩斯密码了吗？",
+      "body": "结合翻译器与课程规划，让演示与练习保持新鲜感。",
+      "primary": "启动翻译器",
+      "secondary": "探索学习路径"
     }
   },
   "community": {
