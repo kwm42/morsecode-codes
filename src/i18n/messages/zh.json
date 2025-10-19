@@ -9,7 +9,7 @@
     "learn": "学习",
     "fun": "应用",
     "community": "社区",
-    "resources": "资源",
+    "posts": "文章",
     "about": "关于我们",
     "privacy": "隐私政策",
     "terms": "使用条款"
@@ -74,16 +74,18 @@
     },
     "articles": {
       "title": "最新文章与动态",
-      "description": "来自摩斯密码社区的新观点、练习技巧与故事分享。",
+      "description": "关注摩斯密码社区的最新教学、功能更新与真实故事。",
       "items": {
         "history": {
           "title": "摩斯密码的起源与发展",
           "description": "梳理摩斯通信的历史、演进与现代应用。",
+          "slug": "history-of-morse-code",
           "cta": "阅读全文"
         },
         "tips": {
           "title": "快速掌握摩斯密码的 5 个技巧",
           "description": "通过日常练习训练听感与手指节奏。",
+          "slug": "learn-morse-faster",
           "cta": "阅读全文"
         }
       }
@@ -592,27 +594,44 @@
       }
     }
   },
-  "aboutResources": {
-    "title": "关于与资源",
-    "description": "了解平台背景、下载资料并获取精选学习链接。",
-    "sections": {
-      "about": {
-        "title": "项目介绍",
-        "description": "使命陈述、团队介绍与路线规划的占位说明。"
+  "posts": {
+    "tagline": "社区速递",
+    "title": "文章与新闻",
+    "description": "获取最新的教程、版本更新与摩斯密码社区故事。",
+    "readMore": "阅读文章",
+    "comingSoon": "敬请期待",
+    "items": [
+      {
+        "slug": "history-of-morse-code",
+        "title": "摩斯密码的起源与发展",
+        "summary": "从 19 世纪电报到现代无线文化，一次梳理摩斯密码的关键节点。",
+        "category": "深度解读",
+        "published": "2025 年 8 月 18 日",
+        "publishedISO": "2025-08-18",
+        "readingTime": "预计 6 分钟",
+        "url": ""
       },
-      "downloads": {
-        "title": "下载与工具包",
-        "description": "包含打印表、练习表与开放数据集的占位说明。"
+      {
+        "slug": "learn-morse-faster",
+        "title": "用微学习计划更快掌握摩斯密码",
+        "summary": "通过短时听抄、敲击与灯光演示轮换练习，搭建专属冲刺计划。",
+        "category": "指南",
+        "published": "2025 年 8 月 5 日",
+        "publishedISO": "2025-08-05",
+        "readingTime": "预计 5 分钟",
+        "url": ""
       },
-      "external": {
-        "title": "外部资源",
-        "description": "精选教程、历史档案与社区组织的占位说明。"
-      },
-      "faq": {
-        "title": "常见问题",
-        "description": "常见疑问、排错指南与联系方式的占位说明。"
+      {
+        "slug": "product-update-august-2025",
+        "title": "八月产品更新：翻译器升级与文章中心上线",
+        "summary": "回顾新版翻译器、灯光演示优化、Google Analytics 集成与全新文章频道。",
+        "category": "更新",
+        "published": "2025 年 8 月 28 日",
+        "publishedISO": "2025-08-28",
+        "readingTime": "预计 4 分钟",
+        "url": ""
       }
-    }
+    ]
   },
   "about": {
     "title": "关于 MorseCode",

@@ -40,8 +40,6 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
 
-  console.log("Current locale:", locale);
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <body

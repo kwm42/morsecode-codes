@@ -9,7 +9,7 @@
     "learn": "Learn",
     "fun": "Applications",
     "community": "Community",
-    "resources": "Resources",
+    "posts": "Posts",
     "about": "About Us",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
@@ -74,16 +74,18 @@
     },
     "articles": {
       "title": "Latest Articles & News",
-      "description": "Fresh perspectives, study tips, and stories from the Morse code community.",
+      "description": "Fresh perspectives, study tips, and updates from the MorseCode community.",
       "items": {
         "history": {
           "title": "History of Morse Code",
           "description": "Trace the origin, evolution, and modern uses of Morse communication.",
+          "slug": "history-of-morse-code",
           "cta": "Read More"
         },
         "tips": {
           "title": "Top 5 Tips to Learn Morse Code Fast",
           "description": "Train your ear and fingertips with practical daily exercises.",
+          "slug": "learn-morse-faster",
           "cta": "Read More"
         }
       }
@@ -592,27 +594,44 @@
       }
     }
   },
-  "aboutResources": {
-    "title": "About & Resources",
-    "description": "Background information, downloadable materials, and curated learning links.",
-    "sections": {
-      "about": {
-        "title": "About The Project",
-        "description": "Placeholder for mission statement, team introductions, and roadmap highlights."
+  "posts": {
+    "tagline": "Community Updates",
+    "title": "Posts & News",
+    "description": "Stay current with tutorials, release notes, and stories from the MorseCode community.",
+    "readMore": "Read article",
+    "comingSoon": "Coming soon",
+    "items": [
+      {
+        "slug": "history-of-morse-code",
+        "title": "History of Morse Code",
+        "summary": "Trace the origins of Morse from telegraph keys to today's digital relays with an easy timeline.",
+        "category": "Deep Dive",
+        "published": "August 18, 2025",
+        "publishedISO": "2025-08-18",
+        "readingTime": "6 min read",
+        "url": ""
       },
-      "downloads": {
-        "title": "Downloads & Kits",
-        "description": "Placeholder for printable charts, practice sheets, and open data bundles."
+      {
+        "slug": "learn-morse-faster",
+        "title": "Learn Morse Faster With Micro Sessions",
+        "summary": "Build a personal sprint plan that rotates between listening, typing, and light demos in short bursts.",
+        "category": "Guides",
+        "published": "August 5, 2025",
+        "publishedISO": "2025-08-05",
+        "readingTime": "5 min read",
+        "url": ""
       },
-      "external": {
-        "title": "External Resources",
-        "description": "Placeholder for curated tutorials, historical archives, and community groups."
-      },
-      "faq": {
-        "title": "FAQ",
-        "description": "Placeholder for common questions, troubleshooting, and contact pathways."
+      {
+        "slug": "product-update-august-2025",
+        "title": "August Product Update: Translator Improvements & New Posts",
+        "summary": "Catch up on the latest feature drops including GA tracking, sitemap automation, and our new posts hub.",
+        "category": "Updates",
+        "published": "August 28, 2025",
+        "publishedISO": "2025-08-28",
+        "readingTime": "4 min read",
+        "url": ""
       }
-    }
+    ]
   },
   "about": {
     "title": "About MorseCode",

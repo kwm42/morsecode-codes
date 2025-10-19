@@ -51,7 +51,7 @@ export default async function LocaleLayout({
     // { name: navigationT("learn"), href: getLocalizedPath(locale, "/learn-practice") },
     { name: navigationT("fun"), href: getLocalizedPath(locale, "/applications-fun") },
     // { name: navigationT("community"), href: getLocalizedPath(locale, "/community") },
-    // { name: navigationT("resources"), href: getLocalizedPath(locale, "/about-resources") },
+    { name: navigationT("posts"), href: getLocalizedPath(locale, "/posts") },
   ];
 
   const languages = locales.map((localeOption) => ({

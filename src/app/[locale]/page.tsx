@@ -75,13 +75,13 @@ export default async function HomePage({ params }: HomePageProps) {
     {
       title: t("articles.items.history.title"),
       description: t("articles.items.history.description"),
-      href: localizedPath(locale, "/about-resources"),
+      href: `${localizedPath(locale, "/posts")}#${t("articles.items.history.slug")}`,
       cta: t("articles.items.history.cta"),
     },
     {
       title: t("articles.items.tips.title"),
       description: t("articles.items.tips.description"),
-      href: localizedPath(locale, "/learn-practice"),
+      href: `${localizedPath(locale, "/posts")}#${t("articles.items.tips.slug")}`,
       cta: t("articles.items.tips.cta"),
     },
   ];
