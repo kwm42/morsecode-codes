@@ -602,6 +602,16 @@
     "comingSoon": "敬请期待",
     "items": [
       {
+        "slug": "what-does-sos-mean",
+        "title": "SOS 在摩斯密码中代表什么？",
+        "summary": "了解 SOS 信号的由来、编码细节与在现代紧急通信中的重要性。",
+        "category": "知识",
+        "published": "2025 年 10 月 21 日",
+        "publishedISO": "2025-10-21",
+        "readingTime": "预计 5 分钟",
+        "url": ""
+      },
+      {
         "slug": "history-of-morse-code",
         "title": "摩斯密码的起源与发展",
         "summary": "从 19 世纪电报到现代无线文化，一次梳理摩斯密码的关键节点。",

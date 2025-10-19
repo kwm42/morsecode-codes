@@ -1,0 +1,36 @@
+# August Product Update: Translator Improvements & New Posts
+
+## Highlights at a Glance
+
+- A cleaner translator layout with smarter defaults
+- Automation scripts that keep the sitemap current before every deploy
+- New Posts hub for sharing guides, updates, and community stories
+- Google Analytics integration with privacy-minded defaults
+
+## Translator Improvements
+
+We reworked the translator panel to emphasize the most common actions. Automatic mode now detects whether you are entering text or Morse, and tooltips clarify speed, tone, and playback controls. Accessibility was a major focus: better contrast, improved keyboard navigation, and region labeling help screen readers follow along.
+
+## Learning & Practice Enhancements
+
+Our chart and learning pages received subtle polish. Headings now align with the theme palette, and copy updates guide newcomers through the learning pathway. The chart’s search performance improved, and we added helper text describing pronunciation for dots and dashes.
+
+## Sitemap & Deployment Automation
+
+Never worry about stale URLs again. We added a `generate-sitemap` script and bundled it into Git hooks so every commit that touches routing automatically refreshes the sitemap. The workflow also cleans old entries to keep search engines in sync with our latest content.
+
+## Introducing the Posts Hub
+
+August marked the debut of `/posts`, a new home for tutorials and announcements. We seeded the hub with historical context, learning strategies, and these very release notes. Each list item draws copy from localized JSON so translators can shape summaries without touching page logic.
+
+## Analytics & Insights
+
+Google Analytics now loads via a lightweight wrapper component. Page titles and canonical URLs stay aligned with locale-specific routes, giving us clearer insights into how learners travel through the site while respecting cookie preferences.
+
+## What’s Next
+
+- MDX-powered article templates for richer storytelling
+- Interactive practice modules that plug into the translator workspace
+- Localization polish, including more examples for zh-CN learners
+
+Thanks for exploring the August update. Your feedback keeps the roadmap inventive—reach out anytime with ideas or requests!

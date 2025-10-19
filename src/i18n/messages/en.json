@@ -602,6 +602,16 @@
     "comingSoon": "Coming soon",
     "items": [
       {
+        "slug": "what-does-sos-mean",
+        "title": "What Does SOS Mean in Morse Code?",
+        "summary": "Learn why SOS became the universal Morse distress call and how to recognize it when every second counts.",
+        "category": "Knowledge",
+        "published": "October 21, 2025",
+        "publishedISO": "2025-10-21",
+        "readingTime": "5 min read",
+        "url": ""
+      },
+      {
         "slug": "history-of-morse-code",
         "title": "History of Morse Code",
         "summary": "Trace the origins of Morse from telegraph keys to today's digital relays with an easy timeline.",

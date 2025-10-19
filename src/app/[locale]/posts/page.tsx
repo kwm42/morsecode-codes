@@ -12,7 +12,6 @@ interface PostItem {
   published: string;
   publishedISO?: string;
   readingTime?: string;
-  url?: string;
 }
 
 type PostsPageProps = {
@@ -39,7 +38,6 @@ export default async function PostsPage({ params }: PostsPageProps) {
   const pageTitle = t("title");
   const pageDescription = t("description");
   const readMoreLabel = t("readMore");
-  const comingSoonLabel = t("comingSoon");
 
   const rawItems = t.raw("items") as PostItem[] | undefined;
   const posts = Array.isArray(rawItems) ? rawItems : [];
@@ -56,8 +54,7 @@ export default async function PostsPage({ params }: PostsPageProps) {
 
       <div className="grid gap-6 lg:grid-cols-2">
         {posts.map((post) => {
-          const hasLink = typeof post.url === "string" && post.url.trim().length > 0;
-          const isExternal = hasLink && /^https?:\/\//.test(post.url!);
+          const postHref = buildCanonicalPath(locale, `/posts/${post.slug}`);
 
           return (
             <article
@@ -82,29 +79,12 @@ export default async function PostsPage({ params }: PostsPageProps) {
 
               <div className="mt-auto flex items-center justify-between">
                 <span className="text-xs text-[var(--muted-foreground)]">#{post.slug}</span>
-                {hasLink ? (
-                  isExternal ? (
-                    <a
-                      href={post.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center rounded-full bg-[var(--primary)] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[var(--primary-foreground)] shadow-sm transition hover:brightness-95"
-                    >
-                      {readMoreLabel}
-                    </a>
-                  ) : (
-                    <Link
-                      href={post.url!}
-                      className="inline-flex items-center rounded-full bg-[var(--primary)] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[var(--primary-foreground)] shadow-sm transition hover:brightness-95"
-                    >
-                      {readMoreLabel}
-                    </Link>
-                  )
-                ) : (
-                  <span className="text-xs font-semibold uppercase tracking-wide text-[var(--muted-foreground)]">
-                    {comingSoonLabel}
-                  </span>
-                )}
+                <Link
+                  href={postHref}
+                  className="inline-flex items-center rounded-full bg-[var(--primary)] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[var(--primary-foreground)] shadow-sm transition hover:brightness-95"
+                >
+                  {readMoreLabel}
+                </Link>
               </div>
             </article>
           );
