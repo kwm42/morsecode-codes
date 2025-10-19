@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const SITE_ORIGIN = "https://morsecode.codes";
@@ -27,6 +27,24 @@ const LOCALIZED_ROUTES = [
   { path: "/terms", changefreq: "yearly", priority: "0.4" },
 ];
 
+const loadGameSlugs = async () => {
+  try {
+    const messagesPath = resolve(process.cwd(), "src", "i18n", "messages", "en.json");
+    const raw = await readFile(messagesPath, "utf8");
+    const data = JSON.parse(raw);
+    const entries = data?.games?.entries;
+    if (!Array.isArray(entries)) {
+      return [];
+    }
+    return entries
+      .map((entry) => entry?.slug)
+      .filter((slug) => typeof slug === "string" && slug.trim().length > 0);
+  } catch (error) {
+    console.warn("读取游戏翻译时出错，跳过游戏链接", error);
+    return [];
+  }
+};
+
 const buildLocalizedPath = (locale, path) => {
   if (path === "/") {
     return `/${locale}`;
@@ -42,11 +60,20 @@ const buildEntry = (loc, changefreq, priority) => ({
 
 const entries = [buildEntry(ROOT_ENTRY.loc, ROOT_ENTRY.changefreq, ROOT_ENTRY.priority)];
 
+const gameSlugs = await loadGameSlugs();
+
 LOCALES.forEach((locale) => {
   LOCALIZED_ROUTES.forEach((route) => {
     const localizedPath = buildLocalizedPath(locale, route.path);
     entries.push(
       buildEntry(`${SITE_ORIGIN}${localizedPath}`, route.changefreq, route.priority),
+    );
+  });
+
+  gameSlugs.forEach((slug) => {
+    const localizedGamePath = buildLocalizedPath(locale, `/games/${slug}`);
+    entries.push(
+      buildEntry(`${SITE_ORIGIN}${localizedGamePath}`, "monthly", "0.55"),
     );
   });
 });
