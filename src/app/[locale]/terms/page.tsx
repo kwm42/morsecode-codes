@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 const SECTION_ORDER = [
   "acceptance",
@@ -17,6 +19,16 @@ type TermsPageProps = {
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: TermsPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale, "/terms"),
+    },
+  };
+}
 
 export default async function TermsPage({ params }: TermsPageProps) {
   const { locale } = await params;

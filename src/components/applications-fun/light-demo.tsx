@@ -194,9 +194,9 @@ const buildLightMorseData = (message: string, wpm: number): LightMorseData => {
 
 export function LightDemo({ copy }: { copy: LightCopy }) {
   const { controls } = copy;
-  const presets = controls.presets ?? [];
+  const presets = useMemo(() => controls.presets ?? [], [controls.presets]);
   const defaultPreset = presets[0];
-  const colorOptionsFromCopy = controls.colorOptions ?? [];
+  const colorOptionsFromCopy = useMemo(() => controls.colorOptions ?? [], [controls.colorOptions]);
   const validColorOptions = useMemo(
     () => colorOptionsFromCopy.filter((option) => Boolean(COLOR_PRESETS[option.value])),
     [colorOptionsFromCopy]

@@ -1,12 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 type AboutPageProps = {
   params: Promise<{
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale, "/about"),
+    },
+  };
+}
 
 export default async function AboutPage({ params }: AboutPageProps) {
   const { locale } = await params;

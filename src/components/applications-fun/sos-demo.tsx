@@ -84,8 +84,9 @@ export function SosDemo({ copy }: { copy: SosCopy }) {
           gainRef.current.gain.cancelScheduledValues(ctx.currentTime);
           gainRef.current.gain.setTargetAtTime(0, ctx.currentTime, 0.01);
         }
-      } catch (error) {
+      } catch (_error) {
         // 忽略硬件不支持导致的异常
+        console.warn("Error stopping gain node", _error);
       }
       gainRef.current.disconnect();
       gainRef.current = null;
@@ -94,8 +95,9 @@ export function SosDemo({ copy }: { copy: SosCopy }) {
     if (oscillatorRef.current) {
       try {
         oscillatorRef.current.stop();
-      } catch (error) {
+      } catch (_error) {
         // Safari 若已停止会抛错，忽略即可
+        console.warn("Error stopping oscillator", _error);
       }
       oscillatorRef.current.disconnect();
       oscillatorRef.current = null;
@@ -153,7 +155,8 @@ export function SosDemo({ copy }: { copy: SosCopy }) {
     if (context.state === "suspended") {
       try {
         await context.resume();
-      } catch (error) {
+      } catch (_error) {
+        console.warn("Error resuming audio context", _error);
         setIsSupported(false);
         return;
       }

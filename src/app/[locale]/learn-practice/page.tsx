@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   CtaBanner,
@@ -12,12 +13,23 @@ import {
   type PracticeCopy,
 } from "@/components/learn-practice";
 import type { Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 type LearnPracticePageProps = {
   params: Promise<{
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: LearnPracticePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale, "/learn-practice"),
+    },
+  };
+}
 
 export default async function LearnPracticePage({ params }: LearnPracticePageProps) {
   const { locale } = await params;

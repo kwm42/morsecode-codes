@@ -15,8 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://morsecode.codes"),
   title: "Morse Code Online – Translate, Practice, and Play",
   description: "Learn, translate, and explore Morse code online.",
+  keywords: [
+    "morse code",
+    "morse code translator",
+    "morse code chart",
+    "learn morse code",
+    "morse code practice",
+    "morse code audio",
+    "morse code lessons",
+    "在线摩斯密码",
+    "摩斯密码翻译",
+    "摩斯密码学习",
+  ],
 };
 
 export default async function RootLayout({

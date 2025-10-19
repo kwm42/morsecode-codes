@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   ApplicationsCta,
@@ -8,12 +9,23 @@ import {
   type ApplicationsPageCopy,
 } from "@/components/applications-fun";
 import type { Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 type ApplicationsFunPageProps = {
   params: Promise<{
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: ApplicationsFunPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale, "/applications-fun"),
+    },
+  };
+}
 
 export default async function ApplicationsFunPage({ params }: ApplicationsFunPageProps) {
   const { locale } = await params;

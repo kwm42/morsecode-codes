@@ -1,12 +1,24 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { TranslatorWorkspace } from "@/components/translator/translator-workspace";
 import type { Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 type TranslatorPageProps = {
   params: Promise<{
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: TranslatorPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale, "/translator"),
+    },
+  };
+}
 
 export default async function TranslatorPage({ params }: TranslatorPageProps) {
   const { locale } = await params;

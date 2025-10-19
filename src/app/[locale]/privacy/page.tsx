@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 const SECTION_ORDER = [
   "introduction",
@@ -19,6 +21,16 @@ type PrivacyPageProps = {
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: PrivacyPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale, "/privacy"),
+    },
+  };
+}
 
 export default async function PrivacyPage({ params }: PrivacyPageProps) {
   const { locale } = await params;

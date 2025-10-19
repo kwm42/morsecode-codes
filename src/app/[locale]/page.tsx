@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/routing";
+import { buildCanonicalPath } from "@/lib/metadata";
 
 const localizedPath = (locale: Locale, pathname: string) =>
   pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
@@ -10,6 +12,16 @@ type HomePageProps = {
     locale: Locale;
   }>;
 };
+
+export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    alternates: {
+      canonical: buildCanonicalPath(locale),
+    },
+  };
+}
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
