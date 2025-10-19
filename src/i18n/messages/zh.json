@@ -466,19 +466,24 @@
       "summary": "将练习转化为协作挑战，适合课堂、社群或聚会互动。",
       "games": [
         {
-          "title": "节奏拼图",
-          "description": "拖动点划碎片还原隐藏单词。",
-          "difficulty": "中级"
+          "title": "摩斯控制面板",
+          "description": "通过极简控制面板多模式训练，让摩斯节奏写入大脑。",
+          "difficulty": "入门-进阶",
+          "available": true,
+          "slug": "morse-control-panel",
+          "ctaLabel": "启动训练"
         },
         {
           "title": "极速打码场",
           "description": "快速解码连续信号，刷新个人纪录。",
-          "difficulty": "高级"
+          "difficulty": "高级",
+          "available": false
         },
         {
           "title": "精准挑战",
           "description": "连续十轮保持 80% 以上准确率以解锁新难度。",
-          "difficulty": "专家"
+          "difficulty": "专家",
+          "available": false
         }
       ],
       "note": "成绩记录与排行榜功能将于后续更新提供。"
@@ -489,6 +494,85 @@
       "primary": "启动翻译器",
       "secondary": "探索学习路径"
     }
+  },
+  "games": {
+    "backToApplications": "返回应用与趣味",
+    "notFound": {
+      "title": "未找到小游戏",
+      "body": "暂时无法定位该摩斯小游戏，请返回合集继续探索其他演示。",
+      "cta": "回到应用与趣味"
+    },
+    "entries": [
+      {
+        "slug": "morse-control-panel",
+        "title": "摩斯控制面板训练器",
+        "subtitle": "透过专注听写练习建立稳定的摩斯节奏。",
+        "summary": "用这个极简控制面板，把摩斯节奏牢牢安装进大脑。",
+        "iframe": {
+          "src": "https://morsle.fun/",
+          "title": "摩斯控制面板训练器"
+        },
+        "metaTitle": "快速资讯",
+        "meta": [
+          {
+            "label": "适合对象",
+            "value": "入门至进阶操作者"
+          },
+          {
+            "label": "建议时长",
+            "value": "5-15 分钟"
+          },
+          {
+            "label": "操作方式",
+            "value": "键盘 + 空格键"
+          }
+        ],
+        "overviewTitle": "玩法概览",
+        "overview": [
+          "带领学习者专注聆听并快速记录，控制面板仅保留必要元素帮助聚焦节奏。",
+          "可依课堂、竞赛或个人练习目标选择不同训练路径，灵活匹配学习场景。"
+        ],
+        "modesTitle": "内建训练模式",
+        "modes": [
+          {
+            "name": "Koch",
+            "description": "按 Koch 方法依序解锁新字符，支持手动设定字符数量或在准确率达标后自动升级。"
+          },
+          {
+            "name": "Hundred",
+            "description": "随机发送维基百科的前 100 高频英文单词，完整输入单词后按空格继续。"
+          },
+          {
+            "name": "Fry",
+            "description": "使用 Fry 视读词清单，十个等级逐步加入更多生活常见词汇。"
+          },
+          {
+            "name": "Ten Hundred",
+            "description": "引用 XKCD “Ten Hundred” 列表，每个等级新增 100 个按字母排序的常用词（包含少量 PG-13 词汇）。"
+          },
+          {
+            "name": "Field Day",
+            "description": "模拟 ARRL Field Day 交换讯息，先输入分类字母数字组合，再输入 Section 缩写，最后按 Enter 记录。"
+          },
+          {
+            "name": "Callsigns",
+            "description": "根据 Super Check Partial 数据库发送热门竞赛呼号，像真实竞赛一样按空格记录每次通讯。"
+          }
+        ],
+        "tipsTitle": "引导小贴士",
+        "tips": [
+          "建议先在 Koch 模式练习 10 个字符，再逐步提升速度与词汇难度。",
+          "课堂演示时可投影控制面板，并提醒学生佩戴耳机专注聆听。",
+          "练习结束后记录准确率与感受，帮助学习者观察阶段性成长。"
+        ],
+        "notesTitle": "操作提示",
+        "notes": "按空格键启动讯号；听到的字符或单词需完整输入，再依模式提示使用空格或 Enter 继续。",
+        "actions": {
+          "openExternal": "在新标签页打开完整版",
+          "back": "返回应用与趣味"
+        }
+      }
+    ]
   },
   "community": {
     "title": "社区与分享",

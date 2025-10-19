@@ -466,19 +466,24 @@
       "summary": "Turn practice into collaborative challenges ideal for classrooms and meetups.",
       "games": [
         {
-          "title": "Pattern puzzle",
-          "description": "Drag and drop dot-dash fragments to rebuild hidden words.",
-          "difficulty": "Intermediate"
+          "title": "Morse control panel",
+          "description": "Install Morse rhythm in your brain with a minimalist trainer featuring multiple study modes.",
+          "difficulty": "Beginner–Intermediate",
+          "available": true,
+          "slug": "morse-control-panel",
+          "ctaLabel": "Launch trainer"
         },
         {
           "title": "Speed typing arena",
           "description": "Decode rapid-fire sequences and chase a new personal record.",
-          "difficulty": "Advanced"
+          "difficulty": "Advanced",
+          "available": false
         },
         {
           "title": "Accuracy challenge",
           "description": "Stay above 80% accuracy across ten rounds to unlock new levels.",
-          "difficulty": "Expert"
+          "difficulty": "Expert",
+          "available": false
         }
       ],
       "note": "Score tracking and leaderboards will arrive in a future update."
@@ -489,6 +494,85 @@
       "primary": "Launch translator",
       "secondary": "Explore lessons"
     }
+  },
+  "games": {
+    "backToApplications": "Back to Applications & Fun",
+    "notFound": {
+      "title": "Game unavailable",
+      "body": "We couldn't find that Morse game. Head back to the collection to explore available demos.",
+      "cta": "Return to Applications & Fun"
+    },
+    "entries": [
+      {
+        "slug": "morse-control-panel",
+        "title": "Morse Control Panel Trainer",
+        "subtitle": "Install Morse timing with focused listening drills.",
+        "summary": "Use this minimalist control panel to install Morse code in your brain.",
+        "iframe": {
+          "src": "https://morsle.fun/",
+          "title": "Morse Control Panel Trainer"
+        },
+        "metaTitle": "Quick stats",
+        "meta": [
+          {
+            "label": "Best for",
+            "value": "Beginner to intermediate operators"
+          },
+          {
+            "label": "Session length",
+            "value": "5–15 minutes"
+          },
+          {
+            "label": "Input",
+            "value": "Keyboard + spacebar"
+          }
+        ],
+        "overviewTitle": "Game overview",
+        "overview": [
+          "Guide learners through a minimalist control panel that focuses on listening accuracy and rapid transcription.",
+          "Select training paths from the drop-down menu to match classroom, contest, or casual practice goals."
+        ],
+        "modesTitle": "Included training modes",
+        "modes": [
+          {
+            "name": "Koch",
+            "description": "Introductory trainer that unveils characters one at a time following the Koch method. Set character count manually or enable automatic leveling when accuracy improves."
+          },
+          {
+            "name": "Hundred",
+            "description": "Play words sourced from Wikipedia's top 100 list. Type the full word you receive, then press the spacebar to continue."
+          },
+          {
+            "name": "Fry",
+            "description": "Cycle through the Fry sight word list. Each of the ten levels adds another hundred words to reinforce real-world vocabulary."
+          },
+          {
+            "name": "Ten Hundred",
+            "description": "Train with words pulled from the XKCD “Ten Hundred” list. Levels add one hundred alphabetical words at a time; note that some entries are PG-13."
+          },
+          {
+            "name": "Field Day",
+            "description": "Simulate ARRL Field Day exchanges with category and Section abbreviations. Include a space between parts, then press Enter to log the contact."
+          },
+          {
+            "name": "Callsigns",
+            "description": "Copy active radiosport callsigns sourced from the Super Check Partial database. Hit the spacebar after each log just like a contest logger."
+          }
+        ],
+        "tipsTitle": "Facilitator tips",
+        "tips": [
+          "Encourage learners to begin in Koch mode with ten characters before increasing speed or word complexity.",
+          "Project the control panel for group walkthroughs while students wear headphones for critical listening.",
+          "Invite learners to record accuracy after each round to visualize progress over multiple sessions."
+        ],
+        "notesTitle": "Play instructions",
+        "notes": "Press the spacebar to start transmissions. Type each character or word exactly as you hear it, then use Space or Enter as indicated for each mode.",
+        "actions": {
+          "openExternal": "Open full game in new tab",
+          "back": "Back to Applications & Fun"
+        }
+      }
+    ]
   },
   "community": {
     "title": "Community & Sharing",

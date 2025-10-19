@@ -1,6 +1,16 @@
+import Link from "next/link";
+import type { Locale } from "@/i18n/routing";
 import type { PuzzlesCopy } from "./types";
 
-export function PuzzlesShowcase({ copy, comingSoonLabel }: { copy: PuzzlesCopy; comingSoonLabel: string }) {
+export function PuzzlesShowcase({
+  copy,
+  comingSoonLabel,
+  locale,
+}: {
+  copy: PuzzlesCopy;
+  comingSoonLabel: string;
+  locale: Locale;
+}) {
   return (
     <section className="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm">
       <header className="mb-6 space-y-2">
@@ -20,9 +30,18 @@ export function PuzzlesShowcase({ copy, comingSoonLabel }: { copy: PuzzlesCopy; 
               </span>
             </div>
             <p className="flex-1 text-sm text-[var(--muted-foreground)]">{game.description}</p>
-            <span className="inline-flex w-fit items-center rounded-full border border-dashed border-[var(--border)] px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted-foreground)]">
-              {comingSoonLabel}
-            </span>
+            {game.available && game.slug ? (
+              <Link
+                href={`/${locale}/games/${game.slug}`}
+                className="inline-flex w-fit items-center rounded-full bg-[var(--primary)] px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-[var(--primary-foreground)] shadow-sm transition hover:brightness-95"
+              >
+                {game.ctaLabel}
+              </Link>
+            ) : (
+              <span className="inline-flex w-fit items-center rounded-full border border-dashed border-[var(--border)] px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[var(--muted-foreground)]">
+                {comingSoonLabel}
+              </span>
+            )}
           </article>
         ))}
       </div>

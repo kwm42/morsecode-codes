@@ -84,9 +84,12 @@ export type LightCopy = {
 };
 
 export type GameCard = {
+  slug?: string;
   title: string;
   description: string;
   difficulty: string;
+  available: boolean;
+  ctaLabel?: string;
 };
 
 export type PuzzlesCopy = {

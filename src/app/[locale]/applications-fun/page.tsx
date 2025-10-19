@@ -104,7 +104,11 @@ export default async function ApplicationsFunPage({ params }: ApplicationsFunPag
       <ApplicationsHero copy={pageCopy.hero} locale={locale} />
       <SosDemo copy={pageCopy.sos} />
       <LightDemo copy={pageCopy.light} />
-      <PuzzlesShowcase copy={pageCopy.puzzles} comingSoonLabel={pageCopy.comingSoonLabel} />
+      <PuzzlesShowcase
+        copy={pageCopy.puzzles}
+        comingSoonLabel={pageCopy.comingSoonLabel}
+        locale={locale}
+      />
       <ApplicationsCta copy={pageCopy.cta} locale={locale} />
     </main>
   );
