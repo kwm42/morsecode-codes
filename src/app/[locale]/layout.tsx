@@ -48,10 +48,10 @@ export default async function LocaleLayout({
     { name: navigationT("home"), href: getLocalizedPath(locale, "/") },
     { name: navigationT("translator"), href: getLocalizedPath(locale, "/translator") },
     { name: navigationT("chart"), href: getLocalizedPath(locale, "/chart") },
-    { name: navigationT("learn"), href: getLocalizedPath(locale, "/learn-practice") },
+    // { name: navigationT("learn"), href: getLocalizedPath(locale, "/learn-practice") },
     { name: navigationT("fun"), href: getLocalizedPath(locale, "/applications-fun") },
     // { name: navigationT("community"), href: getLocalizedPath(locale, "/community") },
-    { name: navigationT("resources"), href: getLocalizedPath(locale, "/about-resources") },
+    // { name: navigationT("resources"), href: getLocalizedPath(locale, "/about-resources") },
   ];
 
   const languages = locales.map((localeOption) => ({
