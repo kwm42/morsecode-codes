@@ -1,64 +1,10 @@
-import type { ComponentType } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import path from 'node:path';
-import { readdir } from 'node:fs/promises';
 import type { Locale } from '@/i18n/routing';
 import { locales } from '@/i18n/routing';
 import { buildAbsoluteUrl, buildCanonicalPath, SITE_ORIGIN } from '@/lib/metadata';
-
-const POSTS_DIRECTORY = path.join(process.cwd(), 'src', 'content');
-
-// 定义文章前言信息的类型，便于复用
-interface PostMetadata {
-  title?: string;
-  description?: string;
-  date?: string;
-  author?: string;
-  readingTime?: string;
-  keywords?: string[];
-  heroImage?: string;
-}
-
-type PostModule = {
-  default: ComponentType<Record<string, unknown>>;
-  metadata?: PostMetadata;
-  frontmatter?: PostMetadata;
-};
-
-const MDX_EXTENSION_PATTERN = /\.(md|mdx)$/;
-
-// 读取内容目录下的全部文章 slug
-async function listPostSlugs(): Promise<string[]> {
-  try {
-    const entries = await readdir(POSTS_DIRECTORY, { withFileTypes: true });
-    return entries
-      .filter((entry) => entry.isFile() && MDX_EXTENSION_PATTERN.test(entry.name))
-      .map((entry) => entry.name.replace(MDX_EXTENSION_PATTERN, ''));
-  } catch (error) {
-    console.error('无法读取文章目录：', error);
-    return [];
-  }
-}
-
-// 动态加载指定 slug 的文章模块
-async function loadPostModule(slug: string): Promise<PostModule | null> {
-  try {
-    const postModule = (await import(
-      /* webpackMode: "lazy-once", webpackChunkName: "content-posts" */ `@/content/${slug}.mdx`
-    )) as PostModule;
-    return postModule;
-  } catch (error) {
-    console.error(`无法加载文章 "${slug}"：`, error);
-    return null;
-  }
-}
-
-// 兼容 metadata 与 frontmatter 两种导出
-const extractMetadata = (module: PostModule): PostMetadata | undefined => {
-  return module.metadata ?? module.frontmatter ?? undefined;
-};
+import { loadPostBySlug, postsRegistry } from '@/content';
 
 const resolveImageUrl = (imagePath: string | undefined) => {
   if (!imagePath) {
@@ -81,7 +27,7 @@ type PostPageProps = {
 };
 
 export async function generateStaticParams() {
-  const slugs = await listPostSlugs();
+  const slugs = Object.keys(postsRegistry);
   return locales.flatMap((locale) =>
     slugs.map((slug) => ({
       locale,
@@ -94,15 +40,15 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const postModule = await loadPostModule(slug);
+  const loadedPost = await loadPostBySlug(slug);
 
-  if (!postModule) {
+  if (!loadedPost) {
     return {
       title: 'Post Not Found',
     };
   }
 
-  const metadata = extractMetadata(postModule);
+  const metadata = loadedPost.metadata;
   const title = metadata?.title ?? slug;
   const description = metadata?.description ?? undefined;
   const canonicalPath = buildCanonicalPath(locale, `/posts/${slug}`);
@@ -145,14 +91,12 @@ export default async function PostPage({ params }: PostPageProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const postModule = await loadPostModule(slug);
-  if (!postModule) {
+  const loadedPost = await loadPostBySlug(slug);
+  if (!loadedPost) {
     notFound();
   }
 
-  const resolvedModule = postModule;
-  const metadata = extractMetadata(resolvedModule) ?? {};
-  const PostContent = resolvedModule.default;
+  const { Content: PostContent, metadata } = loadedPost;
 
   const t = await getTranslations('posts');
   const sectionLabel = t('tagline');
