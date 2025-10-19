@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# 在提交前生成最新 sitemap
+node scripts/generate-sitemap.mjs
+
+# 自动将更新后的 sitemap 加入暂存区
+git add public/sitemap.xml
