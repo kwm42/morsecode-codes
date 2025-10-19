@@ -375,16 +375,71 @@
           "description": "回顾国际通用的历史背景与发送规范，避免误用。"
         }
       ],
-      "controls": [
-        "开始演示",
-        "调节速度",
-        "调整音调"
-      ],
-      "notes": "请在安全的模拟环境中练习，避免在真实频道误发求救信号。"
+      "notes": "请在安全的模拟环境中练习，避免在真实频道误发求救信号。",
+      "play": "开始演示",
+      "stop": "停止演示",
+      "speedLabel": "速度",
+      "speedUnit": "字/分钟",
+      "toneLabel": "音调",
+      "toneUnit": "赫兹",
+      "timelineTitle": "时间线预览",
+      "status": {
+        "ready": "准备就绪，可播放 SOS 信号。",
+        "playing": "正在播放 SOS，请点击停止提前结束。"
+      },
+      "audioUnsupported": "当前浏览器不支持生成音频播放，请尝试使用现代浏览器。"
     },
     "light": {
       "title": "灯光信号模拟",
       "summary": "通过预设与自定义模式体验手电筒通信，适合课堂或外出活动。",
+      "controls": {
+        "start": "开始灯光",
+        "stop": "停止灯光",
+        "presetLabel": "模式",
+        "customLabel": "自定义短语",
+        "customValue": "custom",
+        "messageLabel": "摩斯短语",
+        "messagePlaceholder": "输入字母、数字或标点…",
+        "speedLabel": "速度",
+        "speedUnit": "字/分钟",
+        "brightnessLabel": "亮度",
+  "colorLabel": "灯光色彩",
+  "customColorLabel": "自定义颜色",
+  "colorPickerLabel": "颜色选择器",
+  "colorPickerHint": "微调光束色彩以适配不同场景。",
+        "readyStatus": "准备就绪，可播放所选灯光模式。",
+        "playingStatus": "灯光信号播放中，可点击停止暂停。",
+        "emptyStatus": "请输入至少一个支持的字符以预览模式。",
+        "classroomHint": "放慢节奏有助于课堂或团队演示清晰可见。",
+        "presets": [
+          {
+            "value": "sos",
+            "label": "SOS 预设",
+            "message": "SOS",
+            "speed": 12
+          },
+          {
+            "value": "classroom",
+            "label": "课堂模式",
+            "message": "SOS SOS",
+            "speed": 8
+          }
+        ],
+        "colorOptions": [
+          {
+            "value": "warm",
+            "label": "暖黄色"
+          },
+          {
+            "value": "cool",
+            "label": "海蓝色"
+          },
+          {
+            "value": "emerald",
+            "label": "极光绿"
+          }
+        ]
+      },
       "modes": [
         {
           "title": "SOS 预设",

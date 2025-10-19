@@ -32,8 +32,19 @@ export default async function ApplicationsFunPage({ params }: ApplicationsFunPag
       title: t("sos.title"),
       summary: t("sos.summary"),
       features: t.raw("sos.features") as ApplicationsPageCopy["sos"]["features"],
-      controls: t.raw("sos.controls") as ApplicationsPageCopy["sos"]["controls"],
       notes: t("sos.notes"),
+      playLabel: t("sos.play"),
+      stopLabel: t("sos.stop"),
+      speedLabel: t("sos.speedLabel"),
+      speedUnit: t("sos.speedUnit"),
+      toneLabel: t("sos.toneLabel"),
+      toneUnit: t("sos.toneUnit"),
+      timelineTitle: t("sos.timelineTitle"),
+      status: {
+        ready: t("sos.status.ready"),
+        playing: t("sos.status.playing"),
+      },
+      audioUnsupported: t("sos.audioUnsupported"),
     },
     light: {
       title: t("light.title"),
@@ -41,6 +52,31 @@ export default async function ApplicationsFunPage({ params }: ApplicationsFunPag
       modes: t.raw("light.modes") as ApplicationsPageCopy["light"]["modes"],
       tips: t.raw("light.tips") as ApplicationsPageCopy["light"]["tips"],
       accessibility: t("light.accessibility"),
+      controls: (() => {
+        const controls = t.raw("light.controls") as ApplicationsPageCopy["light"]["controls"];
+        return {
+          start: controls.start,
+          stop: controls.stop,
+          presetLabel: controls.presetLabel,
+          customLabel: controls.customLabel,
+          customValue: controls.customValue,
+          messageLabel: controls.messageLabel,
+          messagePlaceholder: controls.messagePlaceholder,
+          speedLabel: controls.speedLabel,
+          speedUnit: controls.speedUnit,
+          brightnessLabel: controls.brightnessLabel,
+          colorLabel: controls.colorLabel,
+          customColorLabel: controls.customColorLabel,
+          colorPickerLabel: controls.colorPickerLabel,
+          colorPickerHint: controls.colorPickerHint,
+          readyStatus: controls.readyStatus,
+          playingStatus: controls.playingStatus,
+          emptyStatus: controls.emptyStatus,
+          classroomHint: controls.classroomHint,
+          presets: controls.presets,
+          colorOptions: controls.colorOptions,
+        };
+      })(),
     },
     puzzles: {
       title: t("puzzles.title"),
@@ -66,8 +102,8 @@ export default async function ApplicationsFunPage({ params }: ApplicationsFunPag
         </p>
       </header>
       <ApplicationsHero copy={pageCopy.hero} locale={locale} />
-      <SosDemo copy={pageCopy.sos} comingSoonLabel={pageCopy.comingSoonLabel} />
-      <LightDemo copy={pageCopy.light} comingSoonLabel={pageCopy.comingSoonLabel} />
+      <SosDemo copy={pageCopy.sos} />
+      <LightDemo copy={pageCopy.light} />
       <PuzzlesShowcase copy={pageCopy.puzzles} comingSoonLabel={pageCopy.comingSoonLabel} />
       <ApplicationsCta copy={pageCopy.cta} locale={locale} />
     </main>

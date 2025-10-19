@@ -375,16 +375,71 @@
           "description": "Learn the history and best practices behind international distress messages."
         }
       ],
-      "controls": [
-        "Start demo",
-        "Adjust speed",
-        "Tune tone"
-      ],
-      "notes": "Practice responsibly and avoid transmitting SOS patterns outside of safe, simulated environments."
+      "notes": "Practice responsibly and avoid transmitting SOS patterns outside of safe, simulated environments.",
+      "play": "Start demo",
+      "stop": "Stop demo",
+      "speedLabel": "Speed",
+      "speedUnit": "wpm",
+      "toneLabel": "Tone",
+      "toneUnit": "Hz",
+      "timelineTitle": "Timeline preview",
+      "status": {
+        "ready": "Ready to play the SOS sequence.",
+        "playing": "Playing SOS… tap stop to end early."
+      },
+      "audioUnsupported": "Your browser does not support generated audio playback. Please try a modern browser."
     },
     "light": {
       "title": "Flashlight & light signal demo",
       "summary": "Simulate torch-based communication with guided presets and customization options.",
+      "controls": {
+        "start": "Start lights",
+        "stop": "Stop lights",
+        "presetLabel": "Mode",
+        "customLabel": "Custom message",
+        "customValue": "custom",
+        "messageLabel": "Morse message",
+        "messagePlaceholder": "Enter letters, numbers, or punctuation…",
+        "speedLabel": "Speed",
+        "speedUnit": "wpm",
+        "brightnessLabel": "Brightness",
+  "colorLabel": "Light color",
+  "customColorLabel": "Custom color",
+  "colorPickerLabel": "Color picker",
+  "colorPickerHint": "Fine-tune the beam hue for different scenarios.",
+        "readyStatus": "Ready to flash the selected pattern.",
+        "playingStatus": "Flashing pattern… tap stop to pause.",
+        "emptyStatus": "Add at least one supported character to preview the pattern.",
+        "classroomHint": "Slower pacing keeps spacing clear for group demonstrations.",
+        "presets": [
+          {
+            "value": "sos",
+            "label": "SOS preset",
+            "message": "SOS",
+            "speed": 12
+          },
+          {
+            "value": "classroom",
+            "label": "Classroom walkthrough",
+            "message": "SOS SOS",
+            "speed": 8
+          }
+        ],
+        "colorOptions": [
+          {
+            "value": "warm",
+            "label": "Warm beacon"
+          },
+          {
+            "value": "cool",
+            "label": "Cool signal"
+          },
+          {
+            "value": "emerald",
+            "label": "Aurora green"
+          }
+        ]
+      },
       "modes": [
         {
           "title": "SOS preset",
