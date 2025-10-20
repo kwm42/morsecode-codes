@@ -5,6 +5,7 @@ type PostImport = () => Promise<{ default: ComponentType<Record<string, unknown>
 type PostRegistry = Record<string, PostImport>;
 
 export const postsRegistry: PostRegistry = {
+  'morse-code-binary-tree': () => import('./morse-code-binary-tree.mdx'),
   'what-does-sos-mean': () => import('./what-does-sos-mean.mdx'),
   'history-of-morse-code': () => import('./history-of-morse-code.mdx'),
   'learn-morse-faster': () => import('./learn-morse-faster.mdx'),

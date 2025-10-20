@@ -612,6 +612,16 @@
         "url": ""
       },
       {
+        "slug": "morse-code-binary-tree",
+        "title": "摩斯密码二叉树：如何表示字母与数字",
+        "summary": "深入解析二叉树结构如何将点划映射为字母、数字与标点，并附带实用练习技巧。",
+        "category": "知识",
+        "published": "2025 年 10 月 20 日",
+        "publishedISO": "2025-10-20",
+        "readingTime": "预计 8 分钟",
+        "url": ""
+      },
+      {
         "slug": "history-of-morse-code",
         "title": "摩斯密码的起源与发展",
         "summary": "从 19 世纪电报到现代无线文化，一次梳理摩斯密码的关键节点。",

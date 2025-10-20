@@ -612,6 +612,16 @@
         "url": ""
       },
       {
+        "slug": "morse-code-binary-tree",
+        "title": "Morse Code Binary Tree: How It Represents Letters and Numbers",
+        "summary": "Explore how dots and dashes map through a binary tree to decode letters, numbers, and symbols with confidence.",
+        "category": "Knowledge",
+        "published": "October 20, 2025",
+        "publishedISO": "2025-10-20",
+        "readingTime": "8 min read",
+        "url": ""
+      },
+      {
         "slug": "history-of-morse-code",
         "title": "History of Morse Code",
         "summary": "Trace the origins of Morse from telegraph keys to today's digital relays with an easy timeline.",
