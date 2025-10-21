@@ -8,6 +8,7 @@
     "chart": "速查表",
     "learn": "学习",
     "fun": "应用",
+  "words": "常用单词",
     "community": "社区",
     "posts": "文章",
     "about": "关于我们",
@@ -496,6 +497,75 @@
       "primary": "启动翻译器",
       "secondary": "探索学习路径"
     }
+  },
+  "wordsPage": {
+    "title": "常用摩斯词汇表",
+    "summary": "快速查阅高频英文单词的摩斯编码，同时兼顾听抄与发送练习。",
+    "listTitle": "练习词汇清单",
+    "listDescription": "卡片展示大写拼写与分隔清晰的摩斯字母，方便同步练习听写与发报。",
+    "introTitle": "为什么要做单词练习",
+    "intro": [
+      "从单个字符迈向完整单词可以弥补识别与流畅抄写之间的差距。高频词汇也常出现在各类训练素材中，让练习更贴近日常无线电与兴趣应用。",
+      "可以把这份清单当作极简控制面板：挑选少量单词，先跟随音频抄写，再用电键、键盘或手电筒发送回去，加强节奏与间隔感。"
+    ],
+    "tipsTitle": "练习小贴士",
+    "tips": [
+      "先以 18-20 WPM 的字符速度、较大的间隔开始，只要抄写准确率维持在 90% 以上，再逐步缩短间隔。",
+      "将两到三个单词组合成短语，发送时可用斜杠标记单词间隔，帮助听者辨识。",
+      "交替进行视觉参考与脑内听写：先闭眼聆听一轮，再对照此表检视准确率。"
+    ],
+    "note": "列表中的字母以空格分隔，方便阅读。发送多词短语时，请加入短暂停顿或斜杠以表示分隔。",
+    "words": [
+      { "term": "SOS", "morse": "... --- ..." },
+      { "term": "HELP", "morse": ".... . .-.. .--." },
+      { "term": "HELLO", "morse": ".... . .-.. .-.. ---" },
+      { "term": "MORSE", "morse": "-- --- .-. ... ." },
+      { "term": "CODE", "morse": "-.-. --- -.. ." },
+      { "term": "RADIO", "morse": ".-. .- -.. .. ---" },
+      { "term": "SIGNAL", "morse": "... .. --. -. .- .-.." },
+      { "term": "EMERGENCY", "morse": ". -- . .-. --. . -. -.-. -.--" },
+      { "term": "YES", "morse": "-.-- . ..." },
+      { "term": "NO", "morse": "-. ---" },
+      { "term": "FRIEND", "morse": "..-. .-. .. . -. -.." },
+      { "term": "PRACTICE", "morse": ".--. .-. .- -.-. - .. -.-. ." }
+    ]
+  },
+  "wordsDetail": {
+    "back": "返回词汇列表",
+    "heroBadge": "练习词",
+    "heroTitle": "{term} 的摩斯码",
+    "heroDescription": "查看间隔、试听音频，并下载 {term} 的练习片段。",
+    "translatorHeading": "翻译器预览",
+    "translatorDescription": "像主翻译器一样查看原文与摩斯编码。",
+    "translator": {
+      "textLabel": "文本输入",
+      "morseLabel": "摩斯输出"
+    },
+    "patternHeading": "摩斯节奏",
+    "lettersHeading": "拼写拆解",
+    "lettersLabel": "字母",
+    "morseLabel": "摩斯码",
+    "audioTitle": "音频预览",
+    "audioDescription": "根据训练节奏调整速度与音调。",
+    "audio": {
+      "play": "播放音频",
+      "stop": "停止",
+      "download": "下载",
+      "speed": "速度",
+      "speedUnit": "wpm",
+      "tone": "音调",
+      "toneUnit": "Hz",
+      "statusIdle": "准备好播放此节奏。",
+      "statusPlaying": "正在播放…",
+      "statusStopped": "播放已停止。",
+      "statusDownloadReady": "已开始下载。",
+      "statusDownloadError": "无法生成音频。",
+      "statusUnavailable": "当前没有可用的摩斯序列。"
+    },
+    "tipsHeading": "练习建议",
+    "moreHeading": "尝试其他单词",
+    "notFoundTitle": "未找到单词",
+    "notFoundDescription": "未匹配到该词条，请返回主列表重新选择练习目标。"
   },
   "games": {
     "backToApplications": "返回应用与趣味",

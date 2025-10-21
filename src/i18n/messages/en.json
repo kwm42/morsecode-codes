@@ -8,6 +8,7 @@
     "chart": "Chart",
     "learn": "Learn",
     "fun": "Applications",
+  "words": "Words",
     "community": "Community",
     "posts": "Posts",
     "about": "About Us",
@@ -496,6 +497,75 @@
       "primary": "Launch translator",
       "secondary": "Explore lessons"
     }
+  },
+  "wordsPage": {
+    "title": "Common Morse Code Words",
+    "summary": "Practice frequently used English words and see exactly how each one is rendered in Morse code.",
+    "listTitle": "Practice word list",
+    "listDescription": "Each card shows the uppercase spelling with its spaced Morse letters so you can drill listening and sending in tandem.",
+    "introTitle": "Why word drills matter",
+    "intro": [
+      "Moving from single-letter study to whole words bridges the gap between recognition and fluent copying. High-frequency vocabulary also appears in many training sets, making these drills practical for radio work and hobby sessions alike.",
+      "Use this reference the same way you would a minimalist control panel: pick a handful of words, copy them by ear, then send them back with a paddle, keyboard, or flashlight to reinforce timing."
+    ],
+    "tipsTitle": "How to practice",
+    "tips": [
+      "Start at a character speed of 18–20 WPM with generous spacing, then tighten the spacing once your copy rate stays above 90%.",
+      "Group two or three words into short phrases and add a forward slash when sending to mark the gap between words.",
+      "Alternate between visual reference and head copy—listen without looking for one run, then check your accuracy here."
+    ],
+    "note": "Letters inside each code are separated by spaces for clarity. When sending multiple words, add a short pause or a forward slash to show the break.",
+    "words": [
+      { "term": "SOS", "morse": "... --- ..." },
+      { "term": "HELP", "morse": ".... . .-.. .--." },
+      { "term": "HELLO", "morse": ".... . .-.. .-.. ---" },
+      { "term": "MORSE", "morse": "-- --- .-. ... ." },
+      { "term": "CODE", "morse": "-.-. --- -.. ." },
+      { "term": "RADIO", "morse": ".-. .- -.. .. ---" },
+      { "term": "SIGNAL", "morse": "... .. --. -. .- .-.." },
+      { "term": "EMERGENCY", "morse": ". -- . .-. --. . -. -.-. -.--" },
+      { "term": "YES", "morse": "-.-- . ..." },
+      { "term": "NO", "morse": "-. ---" },
+      { "term": "FRIEND", "morse": "..-. .-. .. . -. -.." },
+      { "term": "PRACTICE", "morse": ".--. .-. .- -.-. - .. -.-. ." }
+    ]
+  },
+  "wordsDetail": {
+    "back": "Back to words list",
+    "heroBadge": "Practice word",
+    "heroTitle": "{term} in Morse code",
+    "heroDescription": "Preview spacing, listen to audio, and download {term} as a ready-made drill clip.",
+    "translatorHeading": "Translator preview",
+    "translatorDescription": "See the original word alongside its Morse sequence just like the main converter.",
+    "translator": {
+      "textLabel": "Text input",
+      "morseLabel": "Morse output"
+    },
+    "patternHeading": "Morse pattern",
+    "lettersHeading": "Letter breakdown",
+    "lettersLabel": "Letters",
+    "morseLabel": "Morse",
+    "audioTitle": "Audio preview",
+    "audioDescription": "Adjust speed and tone to match your current training routine.",
+    "audio": {
+      "play": "Play audio",
+      "stop": "Stop",
+      "download": "Download",
+      "speed": "Speed",
+      "speedUnit": "wpm",
+      "tone": "Tone",
+      "toneUnit": "Hz",
+      "statusIdle": "Ready to play this pattern.",
+      "statusPlaying": "Playing…",
+      "statusStopped": "Playback stopped.",
+      "statusDownloadReady": "Download triggered.",
+      "statusDownloadError": "Unable to generate audio.",
+      "statusUnavailable": "No Morse pattern available."
+    },
+    "tipsHeading": "Practice suggestions",
+    "moreHeading": "Try another word",
+    "notFoundTitle": "Word not found",
+    "notFoundDescription": "We couldn't match this entry. Return to the main list to pick another practice word."
   },
   "games": {
     "backToApplications": "Back to Applications & Fun",
